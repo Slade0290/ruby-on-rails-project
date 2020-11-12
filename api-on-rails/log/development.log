@@ -1,0 +1,279 @@
+  [1m[35m (66.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCars (20201112114244)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.0ms)[0m  [1m[35mCREATE TABLE "cars" ("id" bigserial primary key, "brand" character varying, "model" character varying, "year" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201112114244"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-12 13:40:30.915201"], ["updated_at", "2020-11-12 13:40:30.915201"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCar Load (2.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (7.3ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Buick"], ["model", "X3"], ["year", "2018"], ["created_at", "2020-11-12 13:53:34.541253"], ["updated_at", "2020-11-12 13:53:34.541253"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.8ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Toyota"], ["model", "F150"], ["year", "2014"], ["created_at", "2020-11-12 13:53:34.567440"], ["updated_at", "2020-11-12 13:53:34.567440"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.6ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Dodge"], ["model", "Riveria"], ["year", "2010"], ["created_at", "2020-11-12 13:53:34.581163"], ["updated_at", "2020-11-12 13:53:34.581163"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.5ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Audi"], ["model", "Civic"], ["year", "2014"], ["created_at", "2020-11-12 13:53:34.592206"], ["updated_at", "2020-11-12 13:53:34.592206"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.7ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Dodge"], ["model", "Odyssey"], ["year", "2018"], ["created_at", "2020-11-12 13:53:34.605343"], ["updated_at", "2020-11-12 13:53:34.605343"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.6ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "Mustang"], ["year", "2018"], ["created_at", "2020-11-12 13:53:34.625146"], ["updated_at", "2020-11-12 13:53:34.625146"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.7ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Dodge"], ["model", "Regal"], ["year", "2018"], ["created_at", "2020-11-12 13:53:34.645508"], ["updated_at", "2020-11-12 13:53:34.645508"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.5ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Chevy"], ["model", "Camero"], ["year", "2019"], ["created_at", "2020-11-12 13:53:34.680459"], ["updated_at", "2020-11-12 13:53:34.680459"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.5ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Audi"], ["model", "LaCrosse"], ["year", "2016"], ["created_at", "2020-11-12 13:53:34.687844"], ["updated_at", "2020-11-12 13:53:34.687844"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.6ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Chevy"], ["model", "Ram"], ["year", "2019"], ["created_at", "2020-11-12 13:53:34.696310"], ["updated_at", "2020-11-12 13:53:34.696310"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.7ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "BMW"], ["model", "Pathfiner"], ["year", "2020"], ["created_at", "2020-11-12 13:53:34.705725"], ["updated_at", "2020-11-12 13:53:34.705725"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.6ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Buick"], ["model", "Juke"], ["year", "2017"], ["created_at", "2020-11-12 13:53:34.713749"], ["updated_at", "2020-11-12 13:53:34.713749"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.5ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "Mustang"], ["year", "2020"], ["created_at", "2020-11-12 13:53:34.721383"], ["updated_at", "2020-11-12 13:53:34.721383"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.5ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Audi"], ["model", "CR-V"], ["year", "2018"], ["created_at", "2020-11-12 13:53:34.730192"], ["updated_at", "2020-11-12 13:53:34.730192"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.5ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Audi"], ["model", "Camry"], ["year", "2014"], ["created_at", "2020-11-12 13:53:34.737982"], ["updated_at", "2020-11-12 13:53:34.737982"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-11-12 15:01:18 +0100
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 104.0ms | Allocations: 426)
+Completed 200 OK in 324ms (Views: 210.4ms | ActiveRecord: 0.0ms | Allocations: 2587)
+
+
+Started GET "/cars" for ::1 at 2020-11-12 15:01:25 +0100
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (2.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:16
+  Rendered cars/index.html.erb within layouts/application (Duration: 43.8ms | Allocations: 6624)
+[Webpacker] Compiling...
+Started GET "/cars" for ::1 at 2020-11-12 15:01:30 +0100
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (2.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:16
+  Rendered cars/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2884)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/arosf/CoursM2/ruby-on-rails-project/api-on-rails/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 5936ms
+Built at: 2020-11-12 15:01:38
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 13248ms (Views: 13233.2ms | ActiveRecord: 10.7ms | Allocations: 43125)
+
+
+[Webpacker] Compiled all packs in C:/Users/arosf/CoursM2/ruby-on-rails-project/api-on-rails/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 2877ms
+Built at: 2020-11-12 15:01:39
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 9485ms (Views: 9481.0ms | ActiveRecord: 2.8ms | Allocations: 11160)
+
+
+Started GET "/api/cars" for ::1 at 2020-11-12 15:16:47 +0100
+Processing by Api::CarsController#index as JSON
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 0.0ms | Allocations: 42696)
+
+
+  
+NoMethodError (undefined method `policy_scope' for #<Api::CarsController:0x000000000b4b03d8>):
+  
+app/controllers/api/cars_controller.rb:7:in `index'
+Started GET "/api/cars" for ::1 at 2020-11-12 15:17:17 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 18.0ms | Allocations: 87)
+Completed 200 OK in 28ms (Views: 21.2ms | ActiveRecord: 0.0ms | Allocations: 862)
+
+
+Started GET "/api/cars" for ::1 at 2020-11-12 15:17:22 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 452)
+
+
+Started GET "/api/cars" for ::1 at 2020-11-12 15:17:23 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 0.2ms | Allocations: 19)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 433)
+
+
+Started GET "/api/cars" for ::1 at 2020-11-12 15:17:57 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (5.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/api/cars/index.json.jbuilder:1
+  Rendered api/cars/index.json.jbuilder (Duration: 185.9ms | Allocations: 7109)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 87.6ms | Allocations: 8057)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Car:0x0000000008ee63f0>):
+    1: json.array! @cars do |car|
+    2:     json.extract! car, :id, :name
+    3: end
+  
+app/views/api/cars/index.json.jbuilder:2
+app/views/api/cars/index.json.jbuilder:1
+Started GET "/api/cars" for ::1 at 2020-11-12 15:18:18 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 0.2ms | Allocations: 20)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 591)
+
+
+  [1m[36mCar Load (1.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/cars" for ::1 at 2020-11-12 15:26:51 +0100
+  
+SyntaxError (C:/Users/arosf/CoursM2/ruby-on-rails-project/api-on-rails/app/controllers/api/cars_controller.rb:4: syntax error, unexpected local variable or method, expecting `end'
+    before_action :set car, only: [:show, :update]
+                       ^~~
+):
+  
+app/controllers/api/cars_controller.rb:4: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/api/cars_controller.rb:4: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/api/cars_controller.rb:4: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/api/cars" for ::1 at 2020-11-12 15:28:27 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 0.2ms | Allocations: 20)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 597)
+
+
+Started GET "/cars" for ::1 at 2020-11-12 15:28:36 +0100
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (2.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:16
+  Rendered cars/index.html.erb within layouts/application (Duration: 48.3ms | Allocations: 6323)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 120ms (Views: 85.1ms | ActiveRecord: 28.4ms | Allocations: 12196)
+
+
+Started GET "/api/cars" for ::1 at 2020-11-12 15:28:51 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 444)
+
+
+Started GET "/api/cars" for ::1 at 2020-11-12 15:29:37 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 19.1ms | Allocations: 83)
+Completed 200 OK in 29ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 804)
+
+
+Started GET "/api/cars" for ::1 at 2020-11-12 15:29:40 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 0.2ms | Allocations: 19)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 440)
+
+
+Started GET "/api/cars" for ::1 at 2020-11-12 15:29:59 +0100
+Processing by Api::CarsController#index as JSON
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 564)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:7:in `index'
+Started PUT "/__web_console/repl_sessions/94c901613588bae02949d3f7ce08f01d" for ::1 at 2020-11-12 15:30:09 +0100
+Started PUT "/__web_console/repl_sessions/94c901613588bae02949d3f7ce08f01d" for ::1 at 2020-11-12 15:30:17 +0100
+Started PUT "/__web_console/repl_sessions/94c901613588bae02949d3f7ce08f01d" for ::1 at 2020-11-12 15:30:21 +0100
+Started GET "/api/cars" for ::1 at 2020-11-12 15:30:40 +0100
+Processing by Api::CarsController#index as JSON
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 889)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:8:in `index'
+Started PUT "/__web_console/repl_sessions/4633600885abc26680c3744547e23019" for ::1 at 2020-11-12 15:30:46 +0100
+Started PUT "/__web_console/repl_sessions/4633600885abc26680c3744547e23019" for ::1 at 2020-11-12 15:30:46 +0100
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/4633600885abc26680c3744547e23019" for ::1 at 2020-11-12 15:30:51 +0100
+Started PUT "/__web_console/repl_sessions/4633600885abc26680c3744547e23019" for ::1 at 2020-11-12 15:30:54 +0100
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/cars" for ::1 at 2020-11-12 15:32:02 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 41.1ms | Allocations: 5058)
+Completed 200 OK in 52ms (Views: 34.5ms | ActiveRecord: 9.6ms | Allocations: 6114)
+
+
+Started GET "/api/cars" for ::1 at 2020-11-12 15:32:11 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 588)
+
+
+Started GET "/api/cars" for ::1 at 2020-11-12 15:32:20 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 22.1ms | Allocations: 4978)
+Completed 200 OK in 28ms (Views: 15.8ms | ActiveRecord: 8.3ms | Allocations: 5892)
+
+
