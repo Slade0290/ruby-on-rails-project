@@ -1,29 +1,30 @@
 class Api::BaseController < ActionController::API
 
-    # include Pundit
+    include Pundit
     
-    # after_action :verify_authorized, except: [:index , :show , :create , :destroy]
-    # after_action :verify_policy_scoped, only: [:index , :show , :create , :destroy]
+    after_action :verify_authorized, except: [:index , :show , :create , :destroy]
+    after_action :verify_policy_scoped, only: [:index , :show , :create , :destroy]
+    
+    helper_method :current_user
+    
+    rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+    rescue_from ActiveRecord::RecordNotFound, with: :not_found
     
     
-    # rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
-    # rescue_from ActiveRecord::RecordNotFound, with: :not_found
+    private
     
+    def user_not_authorized(exception)
     
-    # private
+        render json: {
+            error: exception.message
+        },status: :unhautorized
+    end    
     
-    # def user_not_authorized(exception)
+    def not_found(exception)
     
-    #     render json: {
-    #         error: exception.message
-    #     },status: :unhautorized
-    # end    
+        render json: {error: exception.message},status: :not_found
     
-    # def not_found(exception)
-    
-    #     render json: {error: exception.message},status: :not_found
-    
-    # end    
+    end    
     
     
     
