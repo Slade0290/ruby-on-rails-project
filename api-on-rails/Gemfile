@@ -64,4 +64,4 @@ gem 'swagger-docs'
 gem 'devise'
 
 #simple_token_auth
-gem 'simple_token_authentication', '~> 1.0'
+gem 'simple_token_authentication'
