@@ -5,6 +5,7 @@ class CarsController < ApplicationController
   # GET /cars.json
   def index
     @cars = Car.all
+    # @cars = policy_scope(Car)
   end
 
   # GET /cars/1

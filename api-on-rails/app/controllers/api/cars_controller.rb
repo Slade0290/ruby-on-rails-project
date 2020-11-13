@@ -7,9 +7,9 @@ class Api::CarsController < Api::BaseController
     swagger_controller :CarsRessources, "Cars Management"
 
     def index
-     @cars = Car.all
+        @cars = Car.all
         
-    # @cars = policy_scope(Car)
+    #  @cars = policy_scope(Car)
     end
 
     def create
