@@ -8,7 +8,7 @@
 /api-on-rails/spec/examples.txt
 /api-on-rails/test/tmp/
 /api-on-rails/test/version_tmp/
-/api-on-rails/tmp/
+/api-on-rails/tmp/*
 
 # Used by dotenv library to load environment variables.
 # .env
