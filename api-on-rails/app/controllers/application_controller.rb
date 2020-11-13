@@ -13,6 +13,9 @@ class ApplicationController < ActionController::Base
         devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
     end
 
+    acts_as_token_authentication_handler_for User
+
+
     def home
         render 'layouts/home'
     end

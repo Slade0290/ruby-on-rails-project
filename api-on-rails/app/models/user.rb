@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   acts_as_token_authenticatable
-
+  # field :authentication_token
+  #User.create(email: 'aros@test.com' , password: 'testest', password_confirmation: 'testest')
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
