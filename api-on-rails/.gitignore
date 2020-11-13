@@ -1,0 +1,56 @@
+*.gem
+*.rbc
+/api-on-rails/.config
+/api-on-rails/coverage/
+/api-on-rails/InstalledFiles
+/api-on-rails/pkg/
+/api-on-rails/spec/reports/
+/api-on-rails/spec/examples.txt
+/api-on-rails/test/tmp/
+/api-on-rails/test/version_tmp/
+/api-on-rails/tmp/
+
+# Used by dotenv library to load environment variables.
+# .env
+
+# Ignore Byebug command history file.
+.byebug_history
+
+## Specific to RubyMotion:
+.dat*
+.repl_history
+build/
+*.bridgesupport
+build-iPhoneOS/
+build-iPhoneSimulator/
+
+## Specific to RubyMotion (use of CocoaPods):
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+# vendor/Pods/
+
+## Documentation cache and generated files:
+/api-on-rails/.yardoc/
+/api-on-rails/_yardoc/
+/api-on-rails/doc/
+/api-on-rails/rdoc/
+
+## Environment normalization:
+/api-on-rails/.bundle/
+/api-on-rails/vendor/bundle
+/api-on-rails/lib/bundler/man/
+
+# for a library or gem, you might want to ignore these files since the code is
+# intended to run in multiple environments; otherwise, check them in:
+# Gemfile.lock
+# .ruby-version
+# .ruby-gemset
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.rvmrc
+
+# Used by RuboCop. Remote config files pulled in from inherit_from directive.
+# .rubocop-https?--*

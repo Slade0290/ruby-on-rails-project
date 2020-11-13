@@ -1,8 +1,11 @@
 
 class Api::CarsController < Api::BaseController
+   
 
     # before_action :set car, only: [:show, :update]
-    
+
+    swagger_controller :CarsRessources, "Cars Management"
+
     def index
         @cars = Car.all
         
@@ -51,5 +54,41 @@ class Api::CarsController < Api::BaseController
 
     def car_params
         params.require(:car).permit(:brand, :model, :year)
-      end
+    end
+
+    def self.add_common_params(api)
+        api.param :form, "car[brand]", :string, :optional, "brand"
+        api.param :form, "car[model]", :string, :optional, "model"
+        api.param :form, "car[year]", :string, :optional, "year"
+    end
+
+    swagger_api :index do |api|
+        summary "Fetches all cars"
+        response :unauthorized
+        response :not_acceptable
+    end
+   
+   swagger_api :create do |api|
+       summary "Create a new car item"
+       Api::CarsController::add_common_params(api)
+       response :unauthorized
+       response :not_acceptable
+       response :unprocessable_entity
+   end
+    
+   swagger_api :show do |api|
+    summary "Fetch a car"
+    param :path, :id, :integer, :required, "Property ID"
+    response :unauthorized
+    response :not_acceptable
+   end
+
+   swagger_api :destroy do |api|
+       summary "Destroy an existing car"
+       param :path, :id, :integer, :required, "Property ID"
+       response :unauthorized
+       response :not_found
+   end
+ 
+  
 end
