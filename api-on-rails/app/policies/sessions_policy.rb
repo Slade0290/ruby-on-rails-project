@@ -1,10 +1,9 @@
-class CarPolicy < ApplicationPolicy
+class SessionsPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
   end
-
   def home?
     true
   end
@@ -32,5 +31,5 @@ class CarPolicy < ApplicationPolicy
   def destroy?
     true
   end
-
+  
 end

@@ -6,12 +6,16 @@ class ApplicationPolicy
     @record = record
   end
 
+  def home?
+    record.user == user
+  end
+
   def index?
-    true
+    record.user == user
   end
 
   def show?
-    true
+    record.user == user
   end
 
   def create?

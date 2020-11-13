@@ -5,16 +5,13 @@ class ApplicationController < ActionController::Base
     acts_as_token_authentication_handler_for User
 
     include Pundit
-    
-    after_action :verify_authorized, expect: :index, unless: :skip_pundit?  
-    after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?  
+
+    after_action :verify_authorized, expect: [:home, :index, :create, :new, :destroy, :show, :update, :edit], unless: :skip_pundit?  
+    # after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?  
 
     def skip_pundit?
         devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
     end
-
-    acts_as_token_authentication_handler_for User
-
 
     def home
         render 'layouts/home'
