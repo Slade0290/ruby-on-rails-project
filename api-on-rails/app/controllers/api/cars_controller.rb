@@ -89,11 +89,6 @@ class Api::CarsController < Api::BaseController
        response :unauthorized
        response :not_found
    end
-
-
-
-
-   
-
+ 
   
 end
