@@ -1,4 +1,4 @@
-class CarPolicy < ApplicationPolicy
+class UsersPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -32,5 +32,5 @@ class CarPolicy < ApplicationPolicy
   def destroy?
     true
   end
-
+  
 end

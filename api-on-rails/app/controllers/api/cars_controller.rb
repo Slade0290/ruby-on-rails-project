@@ -1,8 +1,7 @@
 
 class Api::CarsController < Api::BaseController
    
-
-    before_action :set car, only: [:show, :update]
+    before_action :set car, only: [:show, :update, :index]
 
     swagger_controller :CarsRessources, "Cars Management"
 
