@@ -3,7 +3,7 @@ class Api::BaseController < ActionController::Base
     include Pundit
     
     after_action :verify_authorized, except: [:index , :show , :create , :destroy]
-    after_action :verify_policy_scoped, only: [:index , :show , :create , :destroy]
+    after_action :verify_policy_scoped, only: :destroy 
     
     helper_method :current_user
     

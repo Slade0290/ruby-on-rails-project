@@ -5,31 +5,31 @@ class SessionsPolicy < ApplicationPolicy
     end
   end
   def home?
-    true
+    false
   end
 
   def index?
-    true
+    false
   end
 
   def show?
-    true
+    false
   end
 
   def new?
-    true  
+    false  
   end
 
   def create?
-    true
+    false
   end
 
   def update?
-    true
+    false
   end
 
   def destroy?
-    true
+    false
   end
   
 end

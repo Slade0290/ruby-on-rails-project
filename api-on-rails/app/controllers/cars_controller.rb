@@ -11,6 +11,8 @@ class CarsController < ApplicationController
   # GET /cars/1
   # GET /cars/1.json
   def show
+    @cars = policy_scope(Car)
+
   end
 
   # GET /cars/new

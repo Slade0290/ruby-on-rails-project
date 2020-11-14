@@ -8,22 +8,17 @@ class Users::SessionsController < Devise::SessionsController
   # GET /resource/sign_in
   def new
     super
-    @users = policy_scope(User)
-    authorize(@user)
   end
 
   # POST /resource/sign_in
   def create
     super
-    @users = policy_scope(User)
-    authorize(@user)
   end
 
   # DELETE /resource/sign_out
   def destroy
     super
-    @users = policy_scope(User)
-    authorize(@user)
+
   end
 
   # protected

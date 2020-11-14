@@ -30,7 +30,7 @@ class UsersPolicy < ApplicationPolicy
   end
 
   def destroy?
-    true
+    false
   end
   
 end
