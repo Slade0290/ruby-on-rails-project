@@ -1,17 +1,14 @@
 *.gem
 *.rbc
-/api-on-rails/.config
-/api-on-rails/coverage/
-/api-on-rails/InstalledFiles
-/api-on-rails/pkg/
-/api-on-rails/spec/reports/
-/api-on-rails/spec/examples.txt
-/api-on-rails/test/tmp/
-/api-on-rails/test/version_tmp/
-/api-on-rails/tmp/*
-
-*yarn*
-*node_modules*
+ .config
+coverage/
+InstalledFiles
+pkg/
+spec/reports/
+spec/examples.txt
+test/tmp/
+test/version_tmp/
+tmp/
 
 # Used by dotenv library to load environment variables.
 # .env
@@ -36,15 +33,15 @@ build-iPhoneSimulator/
 # vendor/Pods/
 
 ## Documentation cache and generated files:
-/api-on-rails/.yardoc/
-/api-on-rails/_yardoc/
-/api-on-rails/doc/
-/api-on-rails/rdoc/
+.yardoc/
+_yardoc/
+doc/
+rdoc/
 
 ## Environment normalization:
-/api-on-rails/.bundle/
-/api-on-rails/vendor/bundle
-/api-on-rails/lib/bundler/man/
+.bundle/
+vendor/bundle
+lib/bundler/man/
 
 # for a library or gem, you might want to ignore these files since the code is
 # intended to run in multiple environments; otherwise, check them in:
