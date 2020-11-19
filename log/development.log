@@ -5448,3 +5448,2108 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/config/environment.rb:5)
+Started GET "/" for ::1 at 2020-11-19 17:34:17 +0100
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#home as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layouts/home.html.erb within layouts/application
+  Rendered layouts/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 524)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 117ms (Views: 73.7ms | ActiveRecord: 13.7ms | Allocations: 20002)
+
+
+Started GET "/cars" for ::1 at 2020-11-19 17:34:20 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (3.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:16
+  Rendered cars/index.html.erb within layouts/application (Duration: 32.2ms | Allocations: 6186)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 110ms (Views: 86.6ms | ActiveRecord: 10.0ms | Allocations: 13546)
+
+
+Started GET "/cars/4/edit" for ::1 at 2020-11-19 17:34:24 +0100
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:71:in `set_car'
+  Rendering cars/edit.html.erb within layouts/application
+  Rendered cars/_form.html.erb (Duration: 301.2ms | Allocations: 195991)
+  Rendered cars/edit.html.erb within layouts/application (Duration: 306.7ms | Allocations: 196372)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 391ms (Views: 365.4ms | ActiveRecord: 1.5ms | Allocations: 203385)
+
+
+Started GET "/api/cars" for ::1 at 2020-11-19 17:36:36 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:14: syntax error, unexpected ')'
+        Car.where(brand:) 
+                        ^
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:14: syntax error, unexpected ')'
+app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:14: syntax error, unexpected ')'
+app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:14: syntax error, unexpected ')'
+app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'
+Started PUT "/__web_console/repl_sessions/21a9f878251f0578dace6226ec044e25" for ::1 at 2020-11-19 17:36:39 +0100
+Started PUT "/__web_console/repl_sessions/21a9f878251f0578dace6226ec044e25" for ::1 at 2020-11-19 17:36:40 +0100
+Started GET "/api/cars?brand=Ola" for ::1 at 2020-11-19 17:36:52 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:14: syntax error, unexpected ')'
+        Car.where(brand:) 
+                        ^
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:14: syntax error, unexpected ')'
+app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:14: syntax error, unexpected ')'
+app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:14: syntax error, unexpected ')'
+app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'
+Started PUT "/__web_console/repl_sessions/3d3e009f5b6873fe6c8ac8b97f30ae77" for ::1 at 2020-11-19 17:36:55 +0100
+Started PUT "/__web_console/repl_sessions/3d3e009f5b6873fe6c8ac8b97f30ae77" for ::1 at 2020-11-19 17:36:56 +0100
+Started PUT "/__web_console/repl_sessions/3d3e009f5b6873fe6c8ac8b97f30ae77" for ::1 at 2020-11-19 17:36:59 +0100
+Started GET "/api/cars?brand=Ola" for ::1 at 2020-11-19 17:37:17 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:14: syntax error, unexpected ')'
+        Car.where(brand:) 
+                        ^
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:14: syntax error, unexpected ')'
+app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:14: syntax error, unexpected ')'
+app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:14: syntax error, unexpected ')'
+app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'
+Started PUT "/__web_console/repl_sessions/47ff420b55e2c885fe50401ff56f62b3" for ::1 at 2020-11-19 17:37:26 +0100
+Started PUT "/__web_console/repl_sessions/47ff420b55e2c885fe50401ff56f62b3" for ::1 at 2020-11-19 17:37:27 +0100
+Started PUT "/__web_console/repl_sessions/47ff420b55e2c885fe50401ff56f62b3" for ::1 at 2020-11-19 17:38:19 +0100
+Started PUT "/__web_console/repl_sessions/47ff420b55e2c885fe50401ff56f62b3" for ::1 at 2020-11-19 17:38:21 +0100
+Started GET "/api/cars?brand=Ola" for ::1 at 2020-11-19 17:39:06 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_controller.rb:11:in `index'
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" = $1 LIMIT $2[0m  [["brand", "Ola"], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 3.9ms | Allocations: 15915)
+
+
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" = $1 LIMIT $2[0m  [["brand", "Ola"], ["LIMIT", 11]]
+  
+NoMethodError (undefined method `All' for #<Car::ActiveRecord_Relation:0x000000000c659288>
+Did you mean?  all?):
+  
+app/controllers/api/cars_controller.rb:13:in `index'
+Started GET "/api/cars?brand=Ola" for ::1 at 2020-11-19 17:39:14 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_controller.rb:11:in `index'
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 14.5ms | Allocations: 4697)
+Completed 200 OK in 50ms (Views: 23.4ms | ActiveRecord: 6.0ms | Allocations: 16263)
+
+
+Started GET "/api/cars?brand=Ola" for ::1 at 2020-11-19 17:39:32 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_controller.rb:11:in `index'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 4.1ms | Allocations: 10147)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:14:in `index'
+Started PUT "/__web_console/repl_sessions/49077bb5dc624c2f21850174b1e4f970" for ::1 at 2020-11-19 17:39:40 +0100
+Started PUT "/__web_console/repl_sessions/49077bb5dc624c2f21850174b1e4f970" for ::1 at 2020-11-19 17:39:41 +0100
+Started PUT "/__web_console/repl_sessions/49077bb5dc624c2f21850174b1e4f970" for ::1 at 2020-11-19 17:39:56 +0100
+Started PUT "/__web_console/repl_sessions/49077bb5dc624c2f21850174b1e4f970" for ::1 at 2020-11-19 17:40:03 +0100
+Started GET "/api/cars?brand=Ola" for ::1 at 2020-11-19 17:40:15 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_controller.rb:11:in `index'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 4.1ms | Allocations: 10131)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:14:in `index'
+Started GET "/api/cars?brand=Ola" for ::1 at 2020-11-19 17:40:20 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_controller.rb:11:in `index'
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 14.6ms | Allocations: 4627)
+Completed 200 OK in 38ms (Views: 14.3ms | ActiveRecord: 5.4ms | Allocations: 14919)
+
+
+Started GET "/api/cars?brand=Ola" for ::1 at 2020-11-19 17:40:23 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_controller.rb:11:in `index'
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.5ms | Allocations: 1938)
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 3456)
+
+
+Started GET "/api/cars?brand=Ola" for ::1 at 2020-11-19 17:40:27 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_controller.rb:11:in `index'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 4.3ms | Allocations: 10115)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:14:in `index'
+Started GET "/api/cars?brand=Ola" for ::1 at 2020-11-19 17:42:10 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:96: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars?brand=Ola" for ::1 at 2020-11-19 17:42:19 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 0.2ms | Allocations: 19)
+Completed 200 OK in 20ms (Views: 2.8ms | ActiveRecord: 3.5ms | Allocations: 1947)
+
+
+Started GET "/api/cars?brand=Ola" for ::1 at 2020-11-19 17:42:30 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 583)
+
+
+Started GET "/api/cars?brand=Ola" for ::1 at 2020-11-19 17:43:15 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" = $1[0m  [["brand", "Ola"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 8.0ms | Allocations: 3546)
+Completed 200 OK in 16ms (Views: 7.2ms | ActiveRecord: 3.3ms | Allocations: 5477)
+
+
+Started GET "/api/cars?brand=Test" for ::1 at 2020-11-19 17:43:31 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" = $1[0m  [["brand", "Test"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.8ms | Allocations: 783)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 1341)
+
+
+Started GET "/api/cars?brand=Test,Ola" for ::1 at 2020-11-19 17:43:36 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Test,Ola"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" = $1[0m  [["brand", "Test,Ola"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.5ms | Allocations: 699)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1265)
+
+
+Started GET "/api/cars?brand=Test,Ola" for ::1 at 2020-11-19 17:43:45 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Test,Ola"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.4ms | Allocations: 1816)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:15:in `index'
+Started PUT "/__web_console/repl_sessions/a86224b0eead9e6c119fc98e7af58ddc" for ::1 at 2020-11-19 17:43:47 +0100
+Started PUT "/__web_console/repl_sessions/a86224b0eead9e6c119fc98e7af58ddc" for ::1 at 2020-11-19 17:43:48 +0100
+Started PUT "/__web_console/repl_sessions/a86224b0eead9e6c119fc98e7af58ddc" for ::1 at 2020-11-19 17:43:56 +0100
+Started PUT "/__web_console/repl_sessions/a86224b0eead9e6c119fc98e7af58ddc" for ::1 at 2020-11-19 17:44:00 +0100
+Started PUT "/__web_console/repl_sessions/a86224b0eead9e6c119fc98e7af58ddc" for ::1 at 2020-11-19 17:44:08 +0100
+Started GET "/api/cars?brand=Test,Ola" for ::1 at 2020-11-19 18:00:23 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Test,Ola"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2126)
+
+
+  
+NoMethodError (undefined method `split' for #<ActionController::Parameters:0x00000000103b9d58>):
+  
+app/controllers/api/cars_controller.rb:13:in `index'
+Started GET "/api/cars?brand=Test,Ola" for ::1 at 2020-11-19 18:00:28 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Test,Ola"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2125)
+
+
+  
+NoMethodError (undefined method `split' for #<ActionController::Parameters:0x000000000a349d38>):
+  
+app/controllers/api/cars_controller.rb:13:in `index'
+Started GET "/api/cars?brand=Test,Ola" for ::1 at 2020-11-19 18:02:05 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Test,Ola"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2133)
+
+
+  
+NoMethodError (undefined method `map' for #<ActionController::Parameters:0x000000000c5ea5e0>
+Did you mean?  tap):
+  
+app/controllers/api/cars_controller.rb:13:in `index'
+Started GET "/" for ::1 at 2020-11-19 18:10:59 +0100
+Processing by ApplicationController#home as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layouts/home.html.erb within layouts/application
+  Rendered layouts/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 99)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 39.1ms | ActiveRecord: 16.3ms | Allocations: 14517)
+
+
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:11:16 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 0.0ms | Allocations: 95422)
+
+
+  
+NameError (undefined local variable or method `search_field' for #<Api::CarsController:0x000000000ff8b218>):
+  
+app/controllers/api/cars_controller.rb:13:in `index'
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:11:25 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1989)
+
+
+  
+NoMethodError (undefined method `split' for #<ActionController::Parameters:0x000000000b65b840>):
+  
+app/controllers/api/cars_controller.rb:13:in `index'
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:11:36 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1995)
+
+
+  
+NoMethodError (undefined method `map' for #<ActionController::Parameters:0x000000000fafd6b0>
+Did you mean?  tap):
+  
+app/controllers/api/cars_controller.rb:13:in `index'
+Started PUT "/__web_console/repl_sessions/1912ea518470a9f829ab175c6f6e749d" for ::1 at 2020-11-19 18:12:12 +0100
+Started PUT "/__web_console/repl_sessions/1912ea518470a9f829ab175c6f6e749d" for ::1 at 2020-11-19 18:12:13 +0100
+Started PUT "/__web_console/repl_sessions/1912ea518470a9f829ab175c6f6e749d" for ::1 at 2020-11-19 18:12:16 +0100
+Started PUT "/__web_console/repl_sessions/1912ea518470a9f829ab175c6f6e749d" for ::1 at 2020-11-19 18:12:16 +0100
+Started PUT "/__web_console/repl_sessions/1912ea518470a9f829ab175c6f6e749d" for ::1 at 2020-11-19 18:12:21 +0100
+Started PUT "/__web_console/repl_sessions/1912ea518470a9f829ab175c6f6e749d" for ::1 at 2020-11-19 18:12:23 +0100
+Started PUT "/__web_console/repl_sessions/1912ea518470a9f829ab175c6f6e749d" for ::1 at 2020-11-19 18:12:28 +0100
+Started PUT "/__web_console/repl_sessions/1912ea518470a9f829ab175c6f6e749d" for ::1 at 2020-11-19 18:12:30 +0100
+Started PUT "/__web_console/repl_sessions/1912ea518470a9f829ab175c6f6e749d" for ::1 at 2020-11-19 18:12:30 +0100
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:18:19 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:119: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:119: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:119: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:119: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:18:27 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1980)
+
+
+  
+NoMethodError (undefined method `brand' for #<ActionController::Parameters:0x000000000a4cc9a8>):
+  
+app/controllers/api/cars_controller.rb:13:in `index'
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:18:40 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1980)
+
+
+  
+NoMethodError (undefined method `brand' for #<ActionController::Parameters:0x000000000bc2f028>):
+  
+app/controllers/api/cars_controller.rb:13:in `index'
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:21:02 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:13: syntax error, unexpected method, expecting `then' or ';' or '\n'
+...         if !params[:brand]nil?
+...                           ^~~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:119: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/api/cars_controller.rb:13: syntax error, unexpected method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:119: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/cars_controller.rb:13: syntax error, unexpected method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:119: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/cars_controller.rb:13: syntax error, unexpected method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:119: syntax error, unexpected `end', expecting end-of-input
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:21:13 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:13: syntax error, unexpected method, expecting `then' or ';' or '\n'
+...          if params[:brand]nil?
+...                           ^~~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:119: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/api/cars_controller.rb:13: syntax error, unexpected method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:119: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/cars_controller.rb:13: syntax error, unexpected method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:119: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/cars_controller.rb:13: syntax error, unexpected method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:119: syntax error, unexpected `end', expecting end-of-input
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:21:24 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2)[0m  [["brand", "Ola"], ["brand", "Test"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 15.0ms | Allocations: 3716)
+Completed 200 OK in 28ms (Views: 7.7ms | ActiveRecord: 15.6ms | Allocations: 5764)
+
+
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:22:12 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test", "year"=>"2020"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2)[0m  [["brand", "Ola"], ["brand", "Test"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.9ms | Allocations: 875)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 1452)
+
+
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:23:10 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:17: syntax error, unexpected local variable or method, expecting ')'
+... @cars = Car.where(:year params[:year].split(','))
+...                         ^~~~~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:17: syntax error, unexpected ')', expecting `end'
+...:year params[:year].split(','))
+...                              ^
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:122: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:17: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/api/cars_controller.rb:17: syntax error, unexpected ')', expecting `end'
+app/controllers/api/cars_controller.rb:122: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:17: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/api/cars_controller.rb:17: syntax error, unexpected ')', expecting `end'
+app/controllers/api/cars_controller.rb:122: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:17: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/api/cars_controller.rb:17: syntax error, unexpected ')', expecting `end'
+app/controllers/api/cars_controller.rb:122: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:23:22 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:122: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:122: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:122: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:122: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:23:28 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test", "year"=>"2020"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."year" = $1[0m  [["year", "2020"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 10.9ms | Allocations: 3992)
+Completed 200 OK in 19ms (Views: 9.6ms | ActiveRecord: 4.0ms | Allocations: 5993)
+
+
+Started GET "/api/cars?brand=Ola,Test&year=2020.2013" for ::1 at 2020-11-19 18:23:43 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test", "year"=>"2020.2013"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."year" = $1[0m  [["year", "2020.2013"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.5ms | Allocations: 699)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.4ms | Allocations: 1340)
+
+
+Started GET "/api/cars?brand=Ola,Test&year=2013" for ::1 at 2020-11-19 18:24:02 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test", "year"=>"2013"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."year" = $1[0m  [["year", "2013"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.9ms | Allocations: 783)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 1430)
+
+
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:24:15 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test", "year"=>"2020"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."year" = $1[0m  [["year", "2020"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.1ms | Allocations: 1204)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 1843)
+
+
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:24:53 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test", "year"=>"2020"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.8ms | Allocations: 1817)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:16:in `index'
+Started PUT "/__web_console/repl_sessions/67e47f561987c06e15f5db129cddde07" for ::1 at 2020-11-19 18:25:10 +0100
+Started PUT "/__web_console/repl_sessions/67e47f561987c06e15f5db129cddde07" for ::1 at 2020-11-19 18:25:11 +0100
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2) LIMIT $3[0m  [["brand", "Ola"], ["brand", "Test"], ["LIMIT", 11]]
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:25:32 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test", "year"=>"2020"}
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2)[0m  [["brand", "Ola"], ["brand", "Test"]]
+  ↳ app/controllers/api/cars_controller.rb:17:in `index'
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."year" = $1[0m  [["year", "2020"]]
+  ↳ app/controllers/api/cars_controller.rb:17:in `index'
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 0.5ms | Allocations: 504)
+Completed 200 OK in 21ms (Views: 3.4ms | ActiveRecord: 4.0ms | Allocations: 6658)
+
+
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:28:56 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:22: syntax error, unexpected ')', expecting ']'
+...e.connection.quote(q[fieldName)}'"
+...                              ^
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:25: syntax error, unexpected `end', expecting '}'
+                end
+                ^~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:59: syntax error, unexpected `end', expecting '}'
+        end
+        ^~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:142: syntax error, unexpected `end', expecting '}'):
+  
+app/controllers/api/cars_controller.rb:22: syntax error, unexpected ')', expecting ']'
+app/controllers/api/cars_controller.rb:25: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:59: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:142: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:22: syntax error, unexpected ')', expecting ']'
+app/controllers/api/cars_controller.rb:25: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:59: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:142: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:22: syntax error, unexpected ')', expecting ']'
+app/controllers/api/cars_controller.rb:25: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:59: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:142: syntax error, unexpected `end', expecting '}'
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:29:23 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:22: syntax error, unexpected ')', expecting ']'
+...e.connection.quote(q[fieldName)}'"
+...                              ^
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:25: syntax error, unexpected `end', expecting '}'
+                end
+                ^~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:59: syntax error, unexpected `end', expecting '}'
+        end
+        ^~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:142: syntax error, unexpected `end', expecting '}'):
+  
+app/controllers/api/cars_controller.rb:22: syntax error, unexpected ')', expecting ']'
+app/controllers/api/cars_controller.rb:25: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:59: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:142: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:22: syntax error, unexpected ')', expecting ']'
+app/controllers/api/cars_controller.rb:25: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:59: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:142: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:22: syntax error, unexpected ')', expecting ']'
+app/controllers/api/cars_controller.rb:25: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:59: syntax error, unexpected `end', expecting '}'
+app/controllers/api/cars_controller.rb:142: syntax error, unexpected `end', expecting '}'
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:32:19 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test", "year"=>"2020"}
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2)[0m  [["brand", "Ola"], ["brand", "Test"]]
+  ↳ app/controllers/api/cars_controller.rb:17:in `index'
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."year" = $1[0m  [["year", "2020"]]
+  ↳ app/controllers/api/cars_controller.rb:17:in `index'
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 16ms (Views: 1.1ms | ActiveRecord: 3.4ms | Allocations: 6218)
+
+
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:32:27 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test", "year"=>"2020"}
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2)[0m  [["brand", "Ola"], ["brand", "Test"]]
+  ↳ app/controllers/api/cars_controller.rb:17:in `index'
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."year" = $1[0m  [["year", "2020"]]
+  ↳ app/controllers/api/cars_controller.rb:17:in `index'
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 0.6ms | Allocations: 504)
+Completed 200 OK in 22ms (Views: 2.8ms | ActiveRecord: 5.4ms | Allocations: 6659)
+
+
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:32:55 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2)[0m  [["brand", "Ola"], ["brand", "Test"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.7ms | Allocations: 875)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 1466)
+
+
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:33:18 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test", "year"=>"2020"}
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2)[0m  [["brand", "Ola"], ["brand", "Test"]]
+  ↳ app/controllers/api/cars_controller.rb:17:in `index'
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."year" = $1[0m  [["year", "2020"]]
+  ↳ app/controllers/api/cars_controller.rb:17:in `index'
+  Rendering api/cars/index.json.jbuilder
+  Rendered api/cars/index.json.jbuilder (Duration: 0.4ms | Allocations: 501)
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 2581)
+
+
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:34:22 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:125: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:125: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:125: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:125: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:35:58 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:15: syntax error, unexpected ':', expecting `end'
+                brand = brand: params[:brand].split(',')
+                             ^
+):
+  
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected ':', expecting `end'
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:36:18 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:15: syntax error, unexpected ':', expecting `end'
+                brand = brand: params[:brand].split(',')
+                             ^
+):
+  
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected ':', expecting `end'
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:36:20 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:15: syntax error, unexpected ':', expecting `end'
+                brand = brand: params[:brand].split(',')
+                             ^
+):
+  
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected ':', expecting `end'
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:36:30 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:15: syntax error, unexpected tLABEL
+                brand = (brand: params[:brand].split(','))
+                         ^~~~~~
+):
+  
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected tLABEL
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected tLABEL
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected tLABEL
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:37:32 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:15: syntax error, unexpected '=', expecting `end'
+                :brand = brand: params[:brand].split(...
+                       ^
+):
+  
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected '=', expecting `end'
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected '=', expecting `end'
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected '=', expecting `end'
+Started GET "/api/cars?brand=Ola,Test&year=2020" for ::1 at 2020-11-19 18:39:29 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:15: syntax error, unexpected '=', expecting `end'
+                :brand = brand: params[:brand].split(...
+                       ^
+):
+  
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected '=', expecting `end'
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected '=', expecting `end'
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected '=', expecting `end'
+Started GET "/" for ::1 at 2020-11-19 18:42:26 +0100
+Processing by ApplicationController#home as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layouts/home.html.erb within layouts/application
+  Rendered layouts/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 99)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 43.4ms | ActiveRecord: 7.0ms | Allocations: 14299)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 18:42:50 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:15: syntax error, unexpected '\n', expecting `do' for lambda or tLAMBEG
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:100: syntax error, unexpected `do' for lambda, expecting `end'
+    swagger_api :index do |api|
+                       ^~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:101: syntax error, unexpected string literal, expecting `do' or '{' or '('
+        summary "Fetches all cars"
+                ^
+):
+  
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected '\n', expecting `do' for lambda or tLAMBEG
+app/controllers/api/cars_controller.rb:100: syntax error, unexpected `do' for lambda, expecting `end'
+app/controllers/api/cars_controller.rb:101: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected '\n', expecting `do' for lambda or tLAMBEG
+app/controllers/api/cars_controller.rb:100: syntax error, unexpected `do' for lambda, expecting `end'
+app/controllers/api/cars_controller.rb:101: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:15: syntax error, unexpected '\n', expecting `do' for lambda or tLAMBEG
+app/controllers/api/cars_controller.rb:100: syntax error, unexpected `do' for lambda, expecting `end'
+app/controllers/api/cars_controller.rb:101: syntax error, unexpected string literal, expecting `do' or '{' or '('
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:51:06 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (12.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (Ola)[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 13.8ms | Allocations: 2122)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 12.6ms | Allocations: 3728)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERREUR:  la colonne « ola » n'existe pas
+LINE 1: SELECT "cars".* FROM "cars" WHERE (Ola)
+                                           ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 18:51:16 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (Ola)[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.9ms | Allocations: 2161)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms | Allocations: 2672)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERREUR:  la colonne « ola » n'existe pas
+LINE 1: SELECT "cars".* FROM "cars" WHERE (Ola)
+                                           ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 18:51:54 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2)[0m  [["brand", "Ola"], ["brand", "Test"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 13.1ms | Allocations: 3690)
+Completed 200 OK in 27ms (Views: 6.6ms | ActiveRecord: 15.5ms | Allocations: 5721)
+
+
+Started GET "/api/cars?brand=Ola,Test" for ::1 at 2020-11-19 18:52:20 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:25: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+... = Car.where(brand: brand year: year)
+...                          ^~~~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:129: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:25: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:129: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:25: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:129: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:25: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:129: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 18:52:23 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:25: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+... = Car.where(brand: brand year: year)
+...                          ^~~~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:129: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:25: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:129: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:25: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:129: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:25: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:129: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 18:52:56 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:27: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+... = Car.where(brand: brand year: year)
+...                          ^~~~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 18:54:24 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:27: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+... = Car.where(brand: brand year: nil)
+...                          ^~~~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 18:54:44 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:27: syntax error, unexpected `nil', expecting `do' or '{' or '('
+...rs = Car.where(brand: brand nil year)
+...                            ^~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected `nil', expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected `nil', expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected `nil', expecting `do' or '{' or '('
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 18:57:23 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2) AND "cars"."year" IS NULL[0m  [["brand", "Ola"], ["brand", "Test"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.3ms | Allocations: 708)
+Completed 200 OK in 14ms (Views: 6.2ms | ActiveRecord: 1.6ms | Allocations: 2669)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 18:58:32 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (2.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2) AND "cars"."year" IN (SELECT "cars"."id" FROM "cars" WHERE "cars"."year" IS NOT NULL)[0m  [["brand", "Ola"], ["brand", "Test"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.4ms | Allocations: 2141)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 4.6ms | Allocations: 4227)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERREUR:  l'opérateur n'existe pas : character varying = bigint
+LINE 1: ...HERE "cars"."brand" IN ($1, $2) AND "cars"."year" IN (SELECT...
+                                                             ^
+HINT:  Aucun opérateur ne correspond au nom donné et aux types d'arguments.
+Vous devez ajouter des conversions explicites de type.
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 18:59:05 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 0.0ms | Allocations: 96102)
+
+
+  
+NameError (undefined local variable or method `where' for #<Api::CarsController:0x000000000fd7d8b8>
+Did you mean?  when):
+  
+app/controllers/api/cars_controller.rb:22:in `index'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 18:59:21 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:22: syntax error, unexpected `nil', expecting '('
+                year = not nil
+                           ^~~
+):
+  
+app/controllers/api/cars_controller.rb:22: syntax error, unexpected `nil', expecting '('
+app/controllers/api/cars_controller.rb:22: syntax error, unexpected `nil', expecting '('
+app/controllers/api/cars_controller.rb:22: syntax error, unexpected `nil', expecting '('
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:00:20 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2) AND "cars"."year" = $3[0m  [["brand", "Ola"], ["brand", "Test"], ["year", "t"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.6ms | Allocations: 716)
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 1.6ms | Allocations: 2678)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:00:41 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2) AND "cars"."year" = $3[0m  [["brand", "Ola"], ["brand", "Test"], ["year", "t"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.7ms | Allocations: 716)
+Completed 200 OK in 9ms (Views: 2.5ms | ActiveRecord: 1.4ms | Allocations: 2667)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:00:48 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2) AND "cars"."year" IS NULL[0m  [["brand", "Ola"], ["brand", "Test"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.6ms | Allocations: 707)
+Completed 200 OK in 11ms (Views: 3.5ms | ActiveRecord: 1.6ms | Allocations: 2672)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:05:14 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2) AND "cars"."year" = $3[0m  [["brand", "Ola"], ["brand", "Test"], ["year", "f"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.0ms | Allocations: 716)
+Completed 200 OK in 10ms (Views: 2.8ms | ActiveRecord: 1.7ms | Allocations: 2668)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:05:33 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2) AND "cars"."year" = $3[0m  [["brand", "Ola"], ["brand", "Test"], ["year", "IS NOT NULL"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.7ms | Allocations: 716)
+Completed 200 OK in 10ms (Views: 3.0ms | ActiveRecord: 1.5ms | Allocations: 2661)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:06:01 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2) AND "cars"."year" = $3[0m  [["brand", "Ola"], ["brand", "Test"], ["year", ""]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.1ms | Allocations: 716)
+Completed 200 OK in 9ms (Views: 2.8ms | ActiveRecord: 1.4ms | Allocations: 2677)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:11:21 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:27: syntax error, unexpected local variable or method, expecting `then' or ';' or '\n'
+...rs = Car.where(if not nil brand: brand, if not nil year: yea...
+...                          ^~~~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:27: syntax error, unexpected local variable or method, expecting `then' or ';' or '\n'
+...l brand: brand, if not nil year: year)
+...                           ^~~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected local variable or method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected local variable or method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected local variable or method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected local variable or method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected local variable or method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected local variable or method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:11:45 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:27: syntax error, unexpected local variable or method, expecting `then' or ';' or '\n'
+...rs = Car.where(if not nil brand: brand end, year: year)
+...                          ^~~~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected local variable or method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected local variable or method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected local variable or method, expecting `then' or ';' or '\n'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:15:29 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:27: syntax error, unexpected `end', expecting ')'
+...rs = Car.where(brand: brand end, year: year)
+...                            ^~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected `end', expecting ')'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected `end', expecting ')'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:27: syntax error, unexpected `end', expecting ')'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+Started PUT "/__web_console/repl_sessions/63b4f07a0d220f2ee53806f6b5489925" for ::1 at 2020-11-19 19:15:40 +0100
+Started PUT "/__web_console/repl_sessions/63b4f07a0d220f2ee53806f6b5489925" for ::1 at 2020-11-19 19:15:41 +0100
+Started PUT "/__web_console/repl_sessions/63b4f07a0d220f2ee53806f6b5489925" for ::1 at 2020-11-19 19:15:50 +0100
+Started PUT "/__web_console/repl_sessions/63b4f07a0d220f2ee53806f6b5489925" for ::1 at 2020-11-19 19:15:52 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:22:34 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms | Allocations: 50065)
+
+
+  
+NoMethodError (undefined method `year?' for #<Api::CarsController:0x000000000bf8e7a0>):
+  
+app/controllers/api/cars_controller.rb:27:in `index'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:23:02 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:23: syntax error, unexpected `end'
+            end
+            ^~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:23: syntax error, unexpected `end'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:23: syntax error, unexpected `end'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:23: syntax error, unexpected `end'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:23:12 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 381ms (ActiveRecord: 0.0ms | Allocations: 96077)
+
+
+  
+NameError (undefined local variable or method `year' for #<Api::CarsController:0x000000000a6d7798>):
+  
+app/controllers/api/cars_controller.rb:22:in `index'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:25:39 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.0ms | Allocations: 96218)
+
+
+  
+NameError (undefined local variable or method `year' for #<Api::CarsController:0x000000000ffd5b38>):
+  
+app/controllers/api/cars_controller.rb:27:in `index'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:28:29 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:22: syntax error, unexpected '?'
+                year = ?
+                       ^
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:22: syntax error, unexpected '?'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:22: syntax error, unexpected '?'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:22: syntax error, unexpected '?'
+app/controllers/api/cars_controller.rb:131: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:28:35 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2) AND "cars"."year" = $3[0m  [["brand", "Ola"], ["brand", "Test"], ["year", "?"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.7ms | Allocations: 773)
+Completed 200 OK in 22ms (Views: 6.5ms | ActiveRecord: 9.7ms | Allocations: 2834)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:28:58 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2) AND "cars"."year" = $3[0m  [["brand", "Ola"], ["brand", "Test"], ["year", "[0-9]"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.8ms | Allocations: 716)
+Completed 200 OK in 10ms (Views: 2.7ms | ActiveRecord: 1.7ms | Allocations: 2673)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:29:43 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" IN ($1, $2) AND "cars"."year" = $3[0m  [["brand", "Ola"], ["brand", "Test"], ["year", "%"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 10.2ms | Allocations: 716)
+Completed 200 OK in 30ms (Views: 13.3ms | ActiveRecord: 3.9ms | Allocations: 2669)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:34:06 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:18: syntax error, unexpected '}', expecting =>
+...               brand += {brand}
+...                              ^
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:21: else without rescue is useless
+            else
+            ^~~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:136: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:18: syntax error, unexpected '}', expecting =>
+app/controllers/api/cars_controller.rb:21: else without rescue is useless
+app/controllers/api/cars_controller.rb:136: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:18: syntax error, unexpected '}', expecting =>
+app/controllers/api/cars_controller.rb:21: else without rescue is useless
+app/controllers/api/cars_controller.rb:136: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:18: syntax error, unexpected '}', expecting =>
+app/controllers/api/cars_controller.rb:21: else without rescue is useless
+app/controllers/api/cars_controller.rb:136: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:34:32 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2606)
+
+
+  
+NoMethodError (undefined method `each' for "Ola,Test":String):
+  
+app/controllers/api/cars_controller.rb:17:in `index'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:35:20 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" = $1 AND "cars"."year" = $2[0m  [["brand", ""], ["year", "%"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.1ms | Allocations: 736)
+Completed 200 OK in 11ms (Views: 2.8ms | ActiveRecord: 1.8ms | Allocations: 2700)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:36:02 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" = $1 AND "cars"."year" = $2[0m  [["brand", ""], ["year", "%"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.7ms | Allocations: 708)
+Completed 200 OK in 10ms (Views: 2.6ms | ActiveRecord: 1.5ms | Allocations: 2661)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:39:25 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" = $1 AND "cars"."year" = $2[0m  [["brand", ""], ["year", "%"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.5ms | Allocations: 708)
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 1.4ms | Allocations: 2678)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:39:36 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."brand" = $1 AND "cars"."year" = $2[0m  [["brand", ""], ["year", "%"]]
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 5.0ms | Allocations: 708)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.7ms | Allocations: 1307)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:40:08 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 1303)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:22:in `index'
+Started PUT "/__web_console/repl_sessions/bba68087548bb687407b38460662e1e9" for ::1 at 2020-11-19 19:40:12 +0100
+Started PUT "/__web_console/repl_sessions/bba68087548bb687407b38460662e1e9" for ::1 at 2020-11-19 19:40:12 +0100
+Started PUT "/__web_console/repl_sessions/bba68087548bb687407b38460662e1e9" for ::1 at 2020-11-19 19:40:30 +0100
+Started PUT "/__web_console/repl_sessions/bba68087548bb687407b38460662e1e9" for ::1 at 2020-11-19 19:40:38 +0100
+Started PUT "/__web_console/repl_sessions/bba68087548bb687407b38460662e1e9" for ::1 at 2020-11-19 19:40:44 +0100
+Started PUT "/__web_console/repl_sessions/bba68087548bb687407b38460662e1e9" for ::1 at 2020-11-19 19:40:53 +0100
+Started PUT "/__web_console/repl_sessions/bba68087548bb687407b38460662e1e9" for ::1 at 2020-11-19 19:40:56 +0100
+Started PUT "/__web_console/repl_sessions/bba68087548bb687407b38460662e1e9" for ::1 at 2020-11-19 19:40:59 +0100
+Started PUT "/__web_console/repl_sessions/bba68087548bb687407b38460662e1e9" for ::1 at 2020-11-19 19:41:13 +0100
+Started PUT "/__web_console/repl_sessions/bba68087548bb687407b38460662e1e9" for ::1 at 2020-11-19 19:41:18 +0100
+Started PUT "/__web_console/repl_sessions/bba68087548bb687407b38460662e1e9" for ::1 at 2020-11-19 19:41:23 +0100
+Started PUT "/__web_console/repl_sessions/bba68087548bb687407b38460662e1e9" for ::1 at 2020-11-19 19:41:39 +0100
+Started PUT "/__web_console/repl_sessions/bba68087548bb687407b38460662e1e9" for ::1 at 2020-11-19 19:41:51 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:42:09 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 617)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:22:in `index'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:45:19 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1297)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:21:in `index'
+Started PUT "/__web_console/repl_sessions/c9b8f1f0575ccbb9b86c6d90a7b5b477" for ::1 at 2020-11-19 19:45:23 +0100
+Started PUT "/__web_console/repl_sessions/c9b8f1f0575ccbb9b86c6d90a7b5b477" for ::1 at 2020-11-19 19:45:26 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:46:22 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1297)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:21:in `index'
+Started PUT "/__web_console/repl_sessions/936e71cbf76b6e9f2869d4d08cc1c886" for ::1 at 2020-11-19 19:46:24 +0100
+Started PUT "/__web_console/repl_sessions/936e71cbf76b6e9f2869d4d08cc1c886" for ::1 at 2020-11-19 19:46:27 +0100
+Started PUT "/__web_console/repl_sessions/936e71cbf76b6e9f2869d4d08cc1c886" for ::1 at 2020-11-19 19:47:34 +0100
+Started PUT "/__web_console/repl_sessions/936e71cbf76b6e9f2869d4d08cc1c886" for ::1 at 2020-11-19 19:47:36 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:49:21 +0100
+  
+SyntaxError (C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:26: else without rescue is useless
+            else
+            ^~~~
+C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/app/controllers/api/cars_controller.rb:141: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:26: else without rescue is useless
+app/controllers/api/cars_controller.rb:141: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:26: else without rescue is useless
+app/controllers/api/cars_controller.rb:141: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:26: else without rescue is useless
+app/controllers/api/cars_controller.rb:141: syntax error, unexpected end-of-input, expecting `end'
+Started PUT "/__web_console/repl_sessions/48c964481b8857d8cbdb627643f4c708" for ::1 at 2020-11-19 19:49:25 +0100
+Started PUT "/__web_console/repl_sessions/48c964481b8857d8cbdb627643f4c708" for ::1 at 2020-11-19 19:49:25 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:49:45 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1310)
+
+
+  
+TypeError (String can't be coerced into Integer):
+  
+app/controllers/api/cars_controller.rb:21:in `+'
+app/controllers/api/cars_controller.rb:21:in `block in index'
+app/controllers/api/cars_controller.rb:19:in `each'
+app/controllers/api/cars_controller.rb:19:in `index'
+Started PUT "/__web_console/repl_sessions/028ad972832b2a314a1a2f8c6d112958" for ::1 at 2020-11-19 19:49:47 +0100
+Started PUT "/__web_console/repl_sessions/028ad972832b2a314a1a2f8c6d112958" for ::1 at 2020-11-19 19:49:49 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:50:24 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1301)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:27:in `index'
+Started PUT "/__web_console/repl_sessions/64fa68d7251b7d49a6ec7de4f8385d35" for ::1 at 2020-11-19 19:50:28 +0100
+Started PUT "/__web_console/repl_sessions/64fa68d7251b7d49a6ec7de4f8385d35" for ::1 at 2020-11-19 19:50:30 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:51:04 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1310)
+
+
+  
+TypeError (String can't be coerced into Integer):
+  
+app/controllers/api/cars_controller.rb:22:in `+'
+app/controllers/api/cars_controller.rb:22:in `block in index'
+app/controllers/api/cars_controller.rb:20:in `each'
+app/controllers/api/cars_controller.rb:20:in `index'
+Started PUT "/__web_console/repl_sessions/7755f95b02114b7bb00600e5d47fd3ff" for ::1 at 2020-11-19 19:51:06 +0100
+Started PUT "/__web_console/repl_sessions/7755f95b02114b7bb00600e5d47fd3ff" for ::1 at 2020-11-19 19:51:07 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:57:19 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1310)
+
+
+  
+TypeError (String can't be coerced into Integer):
+  
+app/controllers/api/cars_controller.rb:22:in `+'
+app/controllers/api/cars_controller.rb:22:in `block in index'
+app/controllers/api/cars_controller.rb:20:in `each'
+app/controllers/api/cars_controller.rb:20:in `index'
+Started PUT "/__web_console/repl_sessions/794a79f13b6ec672fa7cd6510f205a05" for ::1 at 2020-11-19 19:57:32 +0100
+Started PUT "/__web_console/repl_sessions/794a79f13b6ec672fa7cd6510f205a05" for ::1 at 2020-11-19 19:57:35 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 19:59:56 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 1310)
+
+
+  
+TypeError (String can't be coerced into Integer):
+  
+app/controllers/api/cars_controller.rb:21:in `+'
+app/controllers/api/cars_controller.rb:21:in `block in index'
+app/controllers/api/cars_controller.rb:19:in `each'
+app/controllers/api/cars_controller.rb:19:in `index'
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 20:00:35 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 1303)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/api/cars_controller.rb:26:in `+'
+app/controllers/api/cars_controller.rb:26:in `index'
+Started PUT "/__web_console/repl_sessions/f37dd9c1ccd8ca8e2571122b3a958241" for ::1 at 2020-11-19 20:00:49 +0100
+Started PUT "/__web_console/repl_sessions/f37dd9c1ccd8ca8e2571122b3a958241" for ::1 at 2020-11-19 20:00:50 +0100
+Started PUT "/__web_console/repl_sessions/f37dd9c1ccd8ca8e2571122b3a958241" for ::1 at 2020-11-19 20:00:51 +0100
+Started PUT "/__web_console/repl_sessions/f37dd9c1ccd8ca8e2571122b3a958241" for ::1 at 2020-11-19 20:00:57 +0100
+Started PUT "/__web_console/repl_sessions/f37dd9c1ccd8ca8e2571122b3a958241" for ::1 at 2020-11-19 20:00:59 +0100
+Started PUT "/__web_console/repl_sessions/f37dd9c1ccd8ca8e2571122b3a958241" for ::1 at 2020-11-19 20:01:02 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 20:01:10 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1302)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:27:in `index'
+Started PUT "/__web_console/repl_sessions/a3f70af2ac342e77b1ae67d0ce2832e5" for ::1 at 2020-11-19 20:01:16 +0100
+Started PUT "/__web_console/repl_sessions/a3f70af2ac342e77b1ae67d0ce2832e5" for ::1 at 2020-11-19 20:01:17 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 20:01:25 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1299)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:27:in `index'
+Started PUT "/__web_console/repl_sessions/e9fb781a77fb772611c2e2cf8db6d60b" for ::1 at 2020-11-19 20:01:28 +0100
+Started PUT "/__web_console/repl_sessions/e9fb781a77fb772611c2e2cf8db6d60b" for ::1 at 2020-11-19 20:01:30 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 20:01:46 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1299)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:27:in `index'
+Started PUT "/__web_console/repl_sessions/0ef822a6cf773827746f166397a994bb" for ::1 at 2020-11-19 20:01:50 +0100
+Started PUT "/__web_console/repl_sessions/0ef822a6cf773827746f166397a994bb" for ::1 at 2020-11-19 20:01:51 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 20:02:05 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1299)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:27:in `index'
+Started PUT "/__web_console/repl_sessions/5c554dea81cf1a7b847efd1747aa20d2" for ::1 at 2020-11-19 20:02:07 +0100
+Started PUT "/__web_console/repl_sessions/5c554dea81cf1a7b847efd1747aa20d2" for ::1 at 2020-11-19 20:02:09 +0100
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 20:03:09 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (4.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 59.1ms | Allocations: 5166)
+Completed 200 OK in 72ms (Views: 20.8ms | ActiveRecord: 40.7ms | Allocations: 6778)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 20:03:40 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (6.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = Ola OR Test )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 8.0ms | Allocations: 2114)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 6.4ms | Allocations: 3708)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERREUR:  la colonne « ola » n'existe pas
+LINE 1: SELECT "cars".* FROM "cars" WHERE ( brand = Ola OR Test )
+                                                    ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 20:04:05 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = "Ola" OR "Test" )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.0ms | Allocations: 2113)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms | Allocations: 3709)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERREUR:  la colonne « Ola » n'existe pas
+LINE 1: SELECT "cars".* FROM "cars" WHERE ( brand = "Ola" OR "Test" ...
+                                                    ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 20:04:38 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( cars.brand = "Ola" OR "Test" )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 4.2ms | Allocations: 2113)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.5ms | Allocations: 3709)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERREUR:  la colonne « Ola » n'existe pas
+LINE 1: SELECT "cars".* FROM "cars" WHERE ( cars.brand = "Ola" OR "T...
+                                                         ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 20:05:18 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (2.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( cars.brand IN "Ola" OR "Test" )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.7ms | Allocations: 2113)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.1ms | Allocations: 3709)
+
+
+  
+ActionView::Template::Error (PG::SyntaxError: ERREUR:  erreur de syntaxe sur ou près de « "Ola" »
+LINE 1: SELECT "cars".* FROM "cars" WHERE ( cars.brand IN "Ola" OR "...
+                                                          ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola" for ::1 at 2020-11-19 20:06:35 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( cars.brand = "Ola" )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.0ms | Allocations: 2112)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms | Allocations: 3703)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERREUR:  la colonne « Ola » n'existe pas
+LINE 1: SELECT "cars".* FROM "cars" WHERE ( cars.brand = "Ola" )
+                                                         ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola" for ::1 at 2020-11-19 20:06:43 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( cars.brand = Ola )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.0ms | Allocations: 2112)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms | Allocations: 3703)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERREUR:  la colonne « ola » n'existe pas
+LINE 1: SELECT "cars".* FROM "cars" WHERE ( cars.brand = Ola )
+                                                         ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola" for ::1 at 2020-11-19 20:06:51 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( cars.brand = "Ola" )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.9ms | Allocations: 2112)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.8ms | Allocations: 3703)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERREUR:  la colonne « Ola » n'existe pas
+LINE 1: SELECT "cars".* FROM "cars" WHERE ( cars.brand = "Ola" )
+                                                         ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola" for ::1 at 2020-11-19 20:07:01 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( cars.brand = "cars.Ola" )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.3ms | Allocations: 2113)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms | Allocations: 3704)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERREUR:  la colonne « cars.Ola » n'existe pas
+LINE 1: SELECT "cars".* FROM "cars" WHERE ( cars.brand = "cars.Ola" ...
+                                                         ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola" for ::1 at 2020-11-19 20:07:09 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( cars.brand = "brand.Ola" )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.9ms | Allocations: 2113)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms | Allocations: 3704)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERREUR:  la colonne « brand.Ola » n'existe pas
+LINE 1: SELECT "cars".* FROM "cars" WHERE ( cars.brand = "brand.Ola"...
+                                                         ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola" for ::1 at 2020-11-19 20:07:17 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( cars.brand = "Ola" )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.3ms | Allocations: 2112)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms | Allocations: 3703)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERREUR:  la colonne « Ola » n'existe pas
+LINE 1: SELECT "cars".* FROM "cars" WHERE ( cars.brand = "Ola" )
+                                                         ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola" for ::1 at 2020-11-19 20:09:52 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 9.8ms | Allocations: 3830)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 3.1ms | Allocations: 5449)
+
+
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 20:10:00 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (5.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR 'Test' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 8.1ms | Allocations: 2163)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 5.1ms | Allocations: 2693)
+
+
+  
+ActionView::Template::Error (PG::InvalidTextRepresentation: ERREUR:  syntaxe en entrée invalide pour le type boolean : « Test »
+LINE 1: ...ELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR 'Test' )
+                                                               ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola,Test" for ::1 at 2020-11-19 20:10:43 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 24.1ms | Allocations: 3931)
+Completed 200 OK in 38ms (Views: 19.5ms | ActiveRecord: 7.6ms | Allocations: 5553)
+
+
+Started GET "/api/cars/?brand=Ola,Test,Tesla" for ::1 at 2020-11-19 20:10:52 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Tesla"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Tesla' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.5ms | Allocations: 855)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.5ms | Allocations: 1406)
+
+
+Started GET "/api/cars/?brand=Ola,Test,BMW" for ::1 at 2020-11-19 20:10:56 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,BMW"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'BMW' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 4.5ms | Allocations: 855)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 1408)
+
+
+Started GET "/api/cars" for ::1 at 2020-11-19 20:11:02 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 7.1ms | Allocations: 1938)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 2468)
+
+
+Started GET "/api/cars/?brand=Ola,Test,Buick" for ::1 at 2020-11-19 20:11:10 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.9ms | Allocations: 1192)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.5ms | Allocations: 1749)
+
+
+Started GET "/api/cars/?brand=Ola,Test,Buick" for ::1 at 2020-11-19 20:13:48 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1441)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/api/cars_controller.rb:44:in `+'
+app/controllers/api/cars_controller.rb:44:in `index'
+Started GET "/api/cars/?brand=Ola,Test,Buick" for ::1 at 2020-11-19 20:14:32 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 9.2ms | Allocations: 4252)
+Completed 200 OK in 15ms (Views: 7.3ms | ActiveRecord: 3.3ms | Allocations: 5874)
+
+
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020" for ::1 at 2020-11-19 20:14:49 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  year = '2020' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 4.7ms | Allocations: 2163)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.7ms | Allocations: 2700)
+
+
+  
+ActionView::Template::Error (PG::SyntaxError: ERREUR:  erreur de syntaxe sur ou près de « year »
+LINE 1: ...and = 'Ola' OR brand = 'Test' OR brand = 'Buick'  year = '20...
+                                                             ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020" for ::1 at 2020-11-19 20:15:03 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  year = 2020 )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.5ms | Allocations: 2113)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.9ms | Allocations: 3714)
+
+
+  
+ActionView::Template::Error (PG::SyntaxError: ERREUR:  erreur de syntaxe sur ou près de « year »
+LINE 1: ...and = 'Ola' OR brand = 'Test' OR brand = 'Buick'  year = 202...
+                                                             ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/config/environment.rb:5)
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020" for ::1 at 2020-11-19 20:16:19 +0100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (9.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND  year = 2020 )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 14.1ms | Allocations: 2609)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 9.1ms | Allocations: 6191)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERREUR:  l'opérateur n'existe pas : character varying = integer
+LINE 1: ...la' OR brand = 'Test' OR brand = 'Buick'  AND  year = 2020 )
+                                                               ^
+HINT:  Aucun opérateur ne correspond au nom donné et aux types d'arguments.
+Vous devez ajouter des conversions explicites de type.
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020" for ::1 at 2020-11-19 20:16:43 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (3.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND  2020 )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 6.2ms | Allocations: 2126)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.0ms | Allocations: 3779)
+
+
+  
+ActionView::Template::Error (PG::DatatypeMismatch: ERREUR:  l'argument de AND doit être de type boolean, et non du type integer
+LINE 1: ...nd = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND  2020 )
+                                                                 ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/config/environment.rb:5)
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020" for ::1 at 2020-11-19 20:17:10 +0100
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (15.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND  2020 )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 24.1ms | Allocations: 2609)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 15.9ms | Allocations: 5529)
+
+
+  
+ActionView::Template::Error (PG::DatatypeMismatch: ERREUR:  l'argument de AND doit être de type boolean, et non du type integer
+LINE 1: ...nd = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND  2020 )
+                                                                 ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started PUT "/__web_console/repl_sessions/b13932e90d05f2daf3423155629a027d" for ::1 at 2020-11-19 20:17:31 +0100
+Started PUT "/__web_console/repl_sessions/b13932e90d05f2daf3423155629a027d" for ::1 at 2020-11-19 20:17:32 +0100
+Started PUT "/__web_console/repl_sessions/b13932e90d05f2daf3423155629a027d" for ::1 at 2020-11-19 20:17:34 +0100
+Started PUT "/__web_console/repl_sessions/b13932e90d05f2daf3423155629a027d" for ::1 at 2020-11-19 20:17:36 +0100
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND  2020 ) LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND  2020 ) LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020" for ::1 at 2020-11-19 20:19:39 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND  2020 )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.0ms | Allocations: 2121)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms | Allocations: 3771)
+
+
+  
+ActionView::Template::Error (PG::DatatypeMismatch: ERREUR:  l'argument de AND doit être de type boolean, et non du type integer
+LINE 1: ...nd = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND  2020 )
+                                                                 ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started PUT "/__web_console/repl_sessions/a58ab3833b6072b40b5d57607210d23b" for ::1 at 2020-11-19 20:20:28 +0100
+Started PUT "/__web_console/repl_sessions/a58ab3833b6072b40b5d57607210d23b" for ::1 at 2020-11-19 20:20:31 +0100
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND  2020 ) LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCar Load (2.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND  2020 ) LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020" for ::1 at 2020-11-19 20:20:38 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 1302)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:29:in `index'
+Started PUT "/__web_console/repl_sessions/6ec54b1c8c2a30493f674e651113a644" for ::1 at 2020-11-19 20:20:42 +0100
+Started PUT "/__web_console/repl_sessions/6ec54b1c8c2a30493f674e651113a644" for ::1 at 2020-11-19 20:20:43 +0100
+Started PUT "/__web_console/repl_sessions/6ec54b1c8c2a30493f674e651113a644" for ::1 at 2020-11-19 20:20:59 +0100
+Started PUT "/__web_console/repl_sessions/6ec54b1c8c2a30493f674e651113a644" for ::1 at 2020-11-19 20:21:02 +0100
+Started PUT "/__web_console/repl_sessions/6ec54b1c8c2a30493f674e651113a644" for ::1 at 2020-11-19 20:21:09 +0100
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020" for ::1 at 2020-11-19 20:21:28 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 1302)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:29:in `index'
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020" for ::1 at 2020-11-19 20:21:34 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND year = 2020 )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.1ms | Allocations: 2114)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.7ms | Allocations: 3722)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERREUR:  l'opérateur n'existe pas : character varying = integer
+LINE 1: ...Ola' OR brand = 'Test' OR brand = 'Buick'  AND year = 2020 )
+                                                               ^
+HINT:  Aucun opérateur ne correspond au nom donné et aux types d'arguments.
+Vous devez ajouter des conversions explicites de type.
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020" for ::1 at 2020-11-19 20:25:46 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND cars.year = '2020' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 15.2ms | Allocations: 4463)
+Completed 200 OK in 22ms (Views: 7.9ms | ActiveRecord: 8.3ms | Allocations: 6100)
+
+
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020,2013" for ::1 at 2020-11-19 20:26:34 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020,2013"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND cars.year = '2020' OR cars.year = '2013' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 4.8ms | Allocations: 1120)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 1699)
+
+
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020,2013" for ::1 at 2020-11-19 20:26:43 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020,2013"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND cars.year = '2020' OR cars.year = '2013' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 4.9ms | Allocations: 1111)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.8ms | Allocations: 1700)
+
+
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020" for ::1 at 2020-11-19 20:26:57 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND cars.year = '2020' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 10.8ms | Allocations: 1026)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.9ms | Allocations: 1603)
+
+
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020,2013" for ::1 at 2020-11-19 20:28:11 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020,2013"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( AND cars.year = '2020' OR cars.year = '2013' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.4ms | Allocations: 2114)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.2ms | Allocations: 3714)
+
+
+  
+ActionView::Template::Error (PG::SyntaxError: ERREUR:  erreur de syntaxe sur ou près de « AND »
+LINE 1: SELECT "cars".* FROM "cars" WHERE ( AND cars.year = '2020' O...
+                                            ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020,2013" for ::1 at 2020-11-19 20:28:39 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020,2013"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND cars.year = '2020' OR cars.year = '2013' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 9.7ms | Allocations: 4168)
+Completed 200 OK in 15ms (Views: 7.3ms | ActiveRecord: 3.7ms | Allocations: 5799)
+
+
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020,2013&model=328i" for ::1 at 2020-11-19 20:30:52 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020,2013", "model"=>"328i"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND cars.year = '2020' OR cars.year = '2013'  model = '328i' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.3ms | Allocations: 2114)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.4ms | Allocations: 3734)
+
+
+  
+ActionView::Template::Error (PG::SyntaxError: ERREUR:  erreur de syntaxe sur ou près de « model »
+LINE 1: ...k'  AND cars.year = '2020' OR cars.year = '2013'  model = '3...
+                                                             ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020,2013&model=328i" for ::1 at 2020-11-19 20:31:32 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020,2013", "model"=>"328i"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND cars.year = '2020' OR cars.year = '2013'  AND cars.model = '328i' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 24.8ms | Allocations: 4168)
+Completed 200 OK in 38ms (Views: 19.2ms | ActiveRecord: 7.8ms | Allocations: 5816)
+
+
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020,2013&model=328i" for ::1 at 2020-11-19 20:32:03 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020,2013", "model"=>"328i"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1328)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:62:in `index'
+Started PUT "/__web_console/repl_sessions/9fd5cefc0aeae2154c573a4b49c19309" for ::1 at 2020-11-19 20:32:05 +0100
+Started PUT "/__web_console/repl_sessions/9fd5cefc0aeae2154c573a4b49c19309" for ::1 at 2020-11-19 20:32:06 +0100
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020,2013&model=328i" for ::1 at 2020-11-19 20:33:04 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020,2013", "model"=>"328i"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND cars.year = '2020' OR cars.year = '2013'  AND cars.model = '328i' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 37.3ms | Allocations: 4178)
+Completed 200 OK in 55ms (Views: 30.7ms | ActiveRecord: 10.2ms | Allocations: 5828)
+
+
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020,2013&model=328i" for ::1 at 2020-11-19 20:33:10 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020,2013", "model"=>"328i"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick'  AND cars.year = '2020' OR cars.year = '2013'  AND cars.model = '328i' )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 6.3ms | Allocations: 1108)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.9ms | Allocations: 1689)
+
+
+Started GET "/api/cars/?brand=Ola,Test,Buick&year=2020,2013&model=328i" for ::1 at 2020-11-19 20:36:11 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"brand"=>"Ola,Test,Buick", "year"=>"2020,2013", "model"=>"328i"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (( brand = 'Ola' OR brand = 'Test' OR brand = 'Buick' )  AND ( cars.year = '2020' OR cars.year = '2013' )  AND ( cars.model = '328i' ) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 32.8ms | Allocations: 3800)
+Completed 200 OK in 53ms (Views: 30.5ms | ActiveRecord: 8.4ms | Allocations: 5450)
+
+
+Started GET "/api/cars" for ::1 at 2020-11-19 20:42:41 +0100
+Processing by Api::CarsController#index as JSON
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 10.4ms | Allocations: 4887)
+Completed 200 OK in 19ms (Views: 10.1ms | ActiveRecord: 1.7ms | Allocations: 6499)
+
+
+Started GET "/api/cars/?created_at=2020-11-13" for ::1 at 2020-11-19 20:43:11 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"2020-11-13"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (17.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at LIKE '2020-11-13'% ) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 22.2ms | Allocations: 2164)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 17.9ms | Allocations: 2690)
+
+
+  
+ActionView::Template::Error (PG::SyntaxError: ERREUR:  erreur de syntaxe sur ou près de « ) »
+LINE 1: ...FROM "cars" WHERE ( ( cars.created_at LIKE '2020-11-13'% ) )
+                                                                    ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?created_at=2020-11-13" for ::1 at 2020-11-19 20:43:42 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"2020-11-13"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (5.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at LIKE '2020-11-13%' ) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 8.5ms | Allocations: 2113)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 5.0ms | Allocations: 3705)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERREUR:  l'opérateur n'existe pas : timestamp without time zone ~~ unknown
+LINE 1: ...CT "cars".* FROM "cars" WHERE ( ( cars.created_at LIKE '2020...
+                                                             ^
+HINT:  Aucun opérateur ne correspond au nom donné et aux types d'arguments.
+Vous devez ajouter des conversions explicites de type.
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars/?created_at=2020-11-13" for ::1 at 2020-11-19 20:47:10 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"2020-11-13"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at::text LIKE '2020-11-13%' ) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 47.5ms | Allocations: 4864)
+Completed 200 OK in 60ms (Views: 18.4ms | ActiveRecord: 31.1ms | Allocations: 6482)
+
+
