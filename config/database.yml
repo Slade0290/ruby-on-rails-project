@@ -24,5 +24,7 @@ test:
   database: postgres
 
 production:
-  <<: *default
-  database: postgres
+      adapter: postgresql
+      database: dd8t7diiunle4t
+      pool: 5
+      timeout: 5000
