@@ -1,12 +1,12 @@
 
 class Api::CarsController < Api::BaseController
    
-    before_action :set car, only: [:show, :update, :index]
+    # before_action :set_car, only: [:show, :update, :index]
 
     swagger_controller :CarsRessources, "Cars Management"
 
     def index
-        # @cars = Car.all
+        @cars = Car.all
         
         @cars = policy_scope(Car)
     end
@@ -50,6 +50,9 @@ class Api::CarsController < Api::BaseController
         # @authorize @car
     end
 
+    # def set_car
+    #     @car = Car.find(params[:id])
+    #   end
 
     def car_params
         params.require(:car).permit(:brand, :model, :year)
