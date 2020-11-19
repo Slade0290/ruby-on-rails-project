@@ -3,12 +3,22 @@ class Api::CarsController < Api::BaseController
    
     # before_action :set_car, only: [:show, :update, :index]
 
+    include Sift
+
+    filter_on :model, type: :string
+    filter_on :brand, type: :string
+    filter_on :year, type: :int
+    filter_on :created_at, type: :date
+    filter_on :updated_at, type: :date
+
     swagger_controller :CarsRessources, "Cars Management"
 
     def index
         @cars = Car.all
         
         @cars = policy_scope(Car)
+        render json: filtrate(Car.all)
+
     end
 
     def create

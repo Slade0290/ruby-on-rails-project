@@ -7,7 +7,7 @@
 default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  port: 5000
+  port: 5432
   username: postgres
   password: root
   timeout: 5000

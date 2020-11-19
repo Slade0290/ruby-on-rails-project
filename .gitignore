@@ -15,6 +15,7 @@ Gemfile/
 Gemfile.lock/
 *.log
 log/
+node_modules/*
 
 # Used by dotenv library to load environment variables.
 # .env
