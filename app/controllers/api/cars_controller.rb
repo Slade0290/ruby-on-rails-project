@@ -9,6 +9,13 @@ class Api::CarsController < Api::BaseController
         @cars = Car.all
         
         @cars = policy_scope(Car)
+        raise
+        
+        Car.where(brand:) 
+        # Active Record & IF
+        # @cars = @cars.joins(:manufacturers).where("manufacturers.name LIKE ?", "%#{​​​​​params[:manufacturer].parameterize}​​​​​%")
+        # Roll back before commit & do it à la main, voir active record et la ligne du dessus pour les dates
+        # on récup les params de l'url dans params et on fait un where
     end
 
     def create

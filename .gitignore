@@ -10,11 +10,12 @@ test/tmp/
 test/version_tmp/
 tmp/
 yarn.lock
-#node_modules/
+node_modules/*
 Gemfile/
 Gemfile.lock/
 *.log
 log/
+config/database.yml
 
 # Used by dotenv library to load environment variables.
 # .env

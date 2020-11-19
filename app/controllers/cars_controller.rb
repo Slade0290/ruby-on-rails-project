@@ -22,6 +22,7 @@ class CarsController < ApplicationController
 
   # GET /cars/1/edit
   def edit
+    @car = Car.new(car_params)
   end
 
   # POST /cars
