@@ -22,7 +22,7 @@ class CarsController < ApplicationController
 
   # GET /cars/1/edit
   def edit
-    @car = Car.new(car_params)
+    @cars = policy_scope(Car)
   end
 
   # POST /cars
