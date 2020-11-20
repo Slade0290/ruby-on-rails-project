@@ -14,7 +14,8 @@ node_modules/*
 Gemfile/
 Gemfile.lock/
 *.log
-log/
+*/*.log
+log/*
 config/database.yml
 
 # Used by dotenv library to load environment variables.

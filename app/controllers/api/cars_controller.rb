@@ -26,22 +26,46 @@ class Api::CarsController < Api::BaseController
                 mainQuery = brandQuery + ") "
             end
             ######################################################## YEAR ########################################################
-            if !params[:year].nil?
-                if !mainQuery.empty?
-                    yearQuery = " AND ( cars.year ="
-                else 
-                    yearQuery = " ( cars.year ="
-                end
-                arr_year = params[:year].split(',')
-                i = 1
-                arr_year.each do |year|
-                    yearQuery += " \'#{year}\' "
-                    i += 1
-                    if i < arr_year.length + 1 
-                        yearQuery += "OR cars.year ="
+            if !params[:year].nil?                
+                if params[:year].include? "["
+                    arr_year = params[:year].tr('[]', '').split(',')                    
+                    if arr_year[0].empty? 
+                        if !mainQuery.empty?
+                            yearQuery = " AND ( cars.year::INTEGER <=" + arr_year[1]
+                        else
+                            yearQuery = " ( cars.year::INTEGER <=" + arr_year[1]
+                        end
+                    elsif arr_year.count == 1
+                        if !mainQuery.empty?
+                            yearQuery = " AND ( cars.year::INTEGER >=" + arr_year[0]
+                        else
+                            yearQuery = " ( cars.year::INTEGER >=" + arr_year[0]
+                        end
+                    else
+                        if !mainQuery.empty?
+                            yearQuery = " AND ( cars.year::INTEGER >="
+                        else
+                            yearQuery = " ( cars.year::INTEGER >="
+                        end
+                        yearQuery += " " + arr_year[0] + " AND cars.year::INTEGER <= " + arr_year[1]
+                    end
+                else
+                    if !mainQuery.empty?
+                        yearQuery = " AND ( cars.year ="
+                    else
+                        yearQuery = " ( cars.year ="
+                    end
+                    arr_year = params[:year].split(',')
+                    i = 1
+                    arr_year.each do |year|
+                        yearQuery += " \'#{year}\' "
+                        i += 1
+                        if i < arr_year.length + 1 
+                            yearQuery += "OR cars.year ="
+                        end
                     end
                 end
-                mainQuery += yearQuery + ") "
+                mainQuery += yearQuery + " ) "
             end
             ######################################################## MODEL ########################################################
             if !params[:model].nil?
@@ -62,41 +86,93 @@ class Api::CarsController < Api::BaseController
                 mainQuery += modelQuery + ") "
             end
             ######################################################## CREATED_AT ########################################################
-            if !params[:created_at].nil?
-                if !mainQuery.empty?
-                    created_atQuery = " AND ( cars.created_at::text LIKE"
-                else 
-                    created_atQuery = " ( cars.created_at::text LIKE"
-                end
-                arr_created_at = params[:created_at].split(',')
-                i = 1
-                arr_created_at.each do |created_at|
-                    created_atQuery += " \'#{created_at}%\' "
-                    i += 1
-                    if i < arr_created_at.length + 1 
-                        created_atQuery += "OR created_at::text LIKE"
+            if !params[:created_at].nil?                
+                if params[:created_at].include? "["
+                    arr_created_at = params[:created_at].tr('[]', '').split(',')                    
+                    if arr_created_at[0].empty? 
+                        if !mainQuery.empty?
+                            created_atQuery = " AND ( cars.created_at <= CAST('" + arr_created_at[1] + "' AS DATE) OR cars.created_at::text LIKE '"+ arr_created_at[1] + "%'"
+                        else
+                            created_atQuery = " ( cars.created_at <= CAST('" + arr_created_at[1] + "' AS DATE) OR cars.created_at::text LIKE '"+ arr_created_at[1] + "%'"
+                        end
+                    elsif arr_created_at.count == 1
+                        if !mainQuery.empty?
+                            created_atQuery = " AND ( cars.created_at >= CAST('" + arr_created_at[0] + "' AS DATE) OR cars.created_at::text LIKE '"+ arr_created_at[0] + "%'"
+                        else
+                            created_atQuery = " ( cars.created_at >= CAST('" + arr_created_at[0] + "' AS DATE) OR cars.created_at::text LIKE '"+ arr_created_at[0] +"%'"
+                        end
+                    else
+                        if !mainQuery.empty?
+                            created_atQuery = " AND ( cars.created_at >="
+                        else
+                            created_atQuery = " ( cars.created_at >="
+                        end
+                        created_atQuery += " CAST('" + arr_created_at[0] + "' AS DATE)" + " AND cars.created_at <= CAST('" + arr_created_at[1] + "' AS DATE) OR  cars.created_at::text LIKE '"+ arr_created_at[0] +"%' OR cars.created_at::text LIKE '"+ arr_created_at[1] + "%'"
+                    end
+                else
+                    if !mainQuery.empty?
+                        created_atQuery = " AND ( cars.created_at::text LIKE"
+                    else 
+                        created_atQuery = " ( cars.created_at::text LIKE"
+                    end
+                    arr_created_at = params[:created_at].split(',')
+                    i = 1
+                    arr_created_at.each do |created_at|
+                        created_atQuery += " \'#{created_at}%\' "
+                        i += 1
+                        if i < arr_created_at.length + 1 
+                            created_atQuery += "OR created_at::text LIKE"
+                        end
                     end
                 end
                 mainQuery += created_atQuery + ") "
             end
             ######################################################## UPDATED_AT ########################################################
-            if !params[:updated_at].nil?
-                if !mainQuery.empty?
-                    updated_atQuery = " AND ( cars.updated_at::text LIKE"
-                else 
-                    updated_atQuery = " ( cars.updated_at::text LIKE"
-                end
-                arr_updated_at = params[:updated_at].split(',')
-                i = 1
-                arr_updated_at.each do |updated_at|
-                    updated_atQuery += " \'#{updated_at}%\' "
-                    i += 1
-                    if i < arr_updated_at.length + 1 
-                        updated_atQuery += "OR updated_at::text LIKE"
+            if !params[:updated_at].nil?                
+                if params[:updated_at].include? "["
+                    arr_updated_at = params[:updated_at].tr('[]', '').split(',')                    
+                    if arr_updated_at[0].empty? 
+                        if !mainQuery.empty?
+                            updated_atQuery = " AND ( cars.updated_at <= CAST('" + arr_updated_at[1] + "' AS DATE) OR cars.updated_at::text LIKE '"+ arr_updated_at[1] + "%'"
+                        else
+                            updated_atQuery = " ( cars.updated_at <= CAST('" + arr_updated_at[1] + "' AS DATE) OR cars.updated_at::text LIKE '"+ arr_updated_at[1] + "%'"
+                        end
+                    elsif arr_updated_at.count == 1
+                        if !mainQuery.empty?
+                            updated_atQuery = " AND ( cars.updated_at >= CAST('" + arr_updated_at[0] + "' AS DATE) OR cars.updated_at::text LIKE '"+ arr_updated_at[0] + "%'"
+                        else
+                            updated_atQuery = " ( cars.updated_at >= CAST('" + arr_updated_at[0] + "' AS DATE) OR cars.updated_at::text LIKE '"+ arr_updated_at[0] +"%'"
+                        end
+                    else
+                        if !mainQuery.empty?
+                            updated_atQuery = " AND ( cars.updated_at >="
+                        else
+                            updated_atQuery = " ( cars.updated_at >="
+                        end
+                        updated_atQuery += " CAST('" + arr_updated_at[0] + "' AS DATE)" + " AND cars.updated_at <= CAST('" + arr_updated_at[1] + "' AS DATE) OR  cars.updated_at::text LIKE '"+ arr_updated_at[0] +"%' OR cars.updated_at::text LIKE '"+ arr_updated_at[1] + "%'"
+                    end
+                else
+                    if !mainQuery.empty?
+                        updated_atQuery = " AND ( cars.updated_at::text LIKE"
+                    else 
+                        updated_atQuery = " ( cars.updated_at::text LIKE"
+                    end
+                    arr_updated_at = params[:updated_at].split(',')
+                    i = 1
+                    arr_updated_at.each do |updated_at|
+                        updated_atQuery += " \'#{updated_at}%\' "
+                        i += 1
+                        if i < arr_updated_at.length + 1 
+                            updated_atQuery += "OR updated_at::text LIKE"
+                        end
                     end
                 end
                 mainQuery += updated_atQuery + ") "
             end
+            ######################################################## RATE ########################################################
+            # TODO
+            ######################################################## AVIS ########################################################
+            # TODO
             @cars = Car.where(mainQuery)
         end
     end

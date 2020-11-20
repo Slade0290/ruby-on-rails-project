@@ -7553,3 +7553,857 @@ Processing by Api::CarsController#index as JSON
 Completed 200 OK in 60ms (Views: 18.4ms | ActiveRecord: 31.1ms | Allocations: 6482)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/config/environment.rb:5)
+Started GET "/api/cars?year=[2013,2020]" for ::1 at 2020-11-20 10:18:19 +0100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2013,2020]"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 697)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:35:in `index'
+Started PUT "/__web_console/repl_sessions/5b39403aed4eef42d21e95c6c48033d5" for ::1 at 2020-11-20 10:36:25 +0100
+Started PUT "/__web_console/repl_sessions/5b39403aed4eef42d21e95c6c48033d5" for ::1 at 2020-11-20 10:36:26 +0100
+Started PUT "/__web_console/repl_sessions/5b39403aed4eef42d21e95c6c48033d5" for ::1 at 2020-11-20 10:36:42 +0100
+Started GET "/api/cars?year=[2013,2020]" for ::1 at 2020-11-20 10:39:09 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2013,2020]"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 1313)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:40:in `index'
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/config/environment.rb:5)
+Started GET "/api/cars?year=[2013,2020]" for ::1 at 2020-11-20 10:40:18 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2013,2020]"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1359)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:41:in `index'
+Started PUT "/__web_console/repl_sessions/f2adbc81573464fc38fa5b720318a28a" for ::1 at 2020-11-20 10:40:23 +0100
+Started PUT "/__web_console/repl_sessions/f2adbc81573464fc38fa5b720318a28a" for ::1 at 2020-11-20 10:40:24 +0100
+Started GET "/api/cars?year=[2013,2020]" for ::1 at 2020-11-20 10:40:37 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2013,2020]"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1311)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:41:in `index'
+Started PUT "/__web_console/repl_sessions/4c9e41d482c6239f7f1c84429d86d9b1" for ::1 at 2020-11-20 10:40:39 +0100
+Started PUT "/__web_console/repl_sessions/4c9e41d482c6239f7f1c84429d86d9b1" for ::1 at 2020-11-20 10:40:39 +0100
+Started GET "/api/cars?year=[2013,2020]" for ::1 at 2020-11-20 10:51:02 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2013,2020]"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1308)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:39:in `index'
+Started PUT "/__web_console/repl_sessions/c299d820466f35a3e1e3f1b6e9ee7b58" for ::1 at 2020-11-20 10:51:06 +0100
+Started PUT "/__web_console/repl_sessions/c299d820466f35a3e1e3f1b6e9ee7b58" for ::1 at 2020-11-20 10:51:06 +0100
+Started PUT "/__web_console/repl_sessions/c299d820466f35a3e1e3f1b6e9ee7b58" for ::1 at 2020-11-20 10:51:11 +0100
+Started GET "/api/cars?year=[2013,2020]" for ::1 at 2020-11-20 10:53:22 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2013,2020]"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1317)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:58:in `index'
+Started PUT "/__web_console/repl_sessions/d2609717cd54cd7fbbe7f7e5f37bcbfa" for ::1 at 2020-11-20 10:53:25 +0100
+Started PUT "/__web_console/repl_sessions/d2609717cd54cd7fbbe7f7e5f37bcbfa" for ::1 at 2020-11-20 10:53:26 +0100
+Started GET "/api/cars?year=[2013,2020]" for ::1 at 2020-11-20 10:53:42 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2013,2020]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (6.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.year >= 2013 AND cars.year <= 2020) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 14.4ms | Allocations: 2217)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 6.9ms | Allocations: 5174)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERREUR:  l'opérateur n'existe pas : character varying >= integer
+LINE 1: SELECT "cars".* FROM "cars" WHERE ( ( cars.year >= 2013 AND ...
+                                                        ^
+HINT:  Aucun opérateur ne correspond au nom donné et aux types d'arguments.
+Vous devez ajouter des conversions explicites de type.
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars?year=[2013,2020]" for ::1 at 2020-11-20 10:55:08 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2013,2020]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.year::INTEGER >= 2013 AND cars.year::INTEGER <= 2020) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 20.1ms | Allocations: 5354)
+Completed 200 OK in 29ms (Views: 6.9ms | ActiveRecord: 14.3ms | Allocations: 7009)
+
+
+Started GET "/api/cars?year=[2013,2020]" for ::1 at 2020-11-20 10:55:45 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2013,2020]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.year::INTEGER >= 2013 AND cars.year::INTEGER <= 2020) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.2ms | Allocations: 1877)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 2477)
+
+
+Started GET "/api/cars?year=[2015,2020]" for ::1 at 2020-11-20 10:56:05 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2015,2020]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.year::INTEGER >= 2015 AND cars.year::INTEGER <= 2020) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.1ms | Allocations: 1531)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 2112)
+
+
+Started GET "/api/cars?year=[2015,2019]" for ::1 at 2020-11-20 10:56:19 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2015,2019]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.year::INTEGER >= 2015 AND cars.year::INTEGER <= 2019) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.4ms | Allocations: 1028)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.5ms | Allocations: 1621)
+
+
+Started GET "/api/cars?year=2015" for ::1 at 2020-11-20 10:56:44 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"2015"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.year = '2015' ) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 8.4ms | Allocations: 3800)
+Completed 200 OK in 13ms (Views: 6.5ms | ActiveRecord: 3.0ms | Allocations: 5442)
+
+
+Started GET "/api/cars?year=[2015,2019]" for ::1 at 2020-11-20 10:57:25 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2015,2019]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.year::INTEGER >= 2015 AND cars.year::INTEGER <= 2019) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 4.4ms | Allocations: 1026)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 1591)
+
+
+Started GET "/api/cars?year=[,2020]" for ::1 at 2020-11-20 10:59:14 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[,2020]"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1297)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:37:in `index'
+Started PUT "/__web_console/repl_sessions/d0df551f8f74327d10001908ad732059" for ::1 at 2020-11-20 10:59:18 +0100
+Started PUT "/__web_console/repl_sessions/d0df551f8f74327d10001908ad732059" for ::1 at 2020-11-20 10:59:23 +0100
+Started PUT "/__web_console/repl_sessions/d0df551f8f74327d10001908ad732059" for ::1 at 2020-11-20 10:59:24 +0100
+Started PUT "/__web_console/repl_sessions/d0df551f8f74327d10001908ad732059" for ::1 at 2020-11-20 10:59:29 +0100
+Started PUT "/__web_console/repl_sessions/d0df551f8f74327d10001908ad732059" for ::1 at 2020-11-20 10:59:29 +0100
+Started GET "/api/cars?year=[,2020]" for ::1 at 2020-11-20 11:05:50 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[,2020]"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1297)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:47:in `index'
+Started PUT "/__web_console/repl_sessions/efe8f51b5cf10c96875d65151399c17b" for ::1 at 2020-11-20 11:05:53 +0100
+Started PUT "/__web_console/repl_sessions/efe8f51b5cf10c96875d65151399c17b" for ::1 at 2020-11-20 11:05:54 +0100
+Started GET "/api/cars?year=[,2020]" for ::1 at 2020-11-20 11:06:05 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[,2020]"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1297)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:47:in `index'
+Started PUT "/__web_console/repl_sessions/72c8b327608f13ee7f52cbd1e793af24" for ::1 at 2020-11-20 11:06:07 +0100
+Started PUT "/__web_console/repl_sessions/72c8b327608f13ee7f52cbd1e793af24" for ::1 at 2020-11-20 11:06:07 +0100
+Started GET "/api/cars?year=[,2020]" for ::1 at 2020-11-20 11:08:07 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[,2020]"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1299)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:52:in `index'
+Started PUT "/__web_console/repl_sessions/d87d06431097ff20dcbea22acc8edee8" for ::1 at 2020-11-20 11:08:50 +0100
+Started GET "/api/cars?year=[,2020]" for ::1 at 2020-11-20 11:08:52 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[,2020]"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1302)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:69:in `index'
+Started PUT "/__web_console/repl_sessions/6520b49121c799647d9aac023d637630" for ::1 at 2020-11-20 11:08:54 +0100
+Started PUT "/__web_console/repl_sessions/6520b49121c799647d9aac023d637630" for ::1 at 2020-11-20 11:08:55 +0100
+Started GET "/api/cars?year=[,2020]" for ::1 at 2020-11-20 11:09:03 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[,2020]"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1302)
+
+
+  
+RuntimeError ():
+  
+app/controllers/api/cars_controller.rb:69:in `index'
+Started PUT "/__web_console/repl_sessions/a6ac3e837be5aa8636d890750e364ef1" for ::1 at 2020-11-20 11:09:04 +0100
+Started PUT "/__web_console/repl_sessions/a6ac3e837be5aa8636d890750e364ef1" for ::1 at 2020-11-20 11:09:05 +0100
+Started GET "/api/cars?year=[,2020]" for ::1 at 2020-11-20 11:09:17 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[,2020]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.year::INTEGER <=2020 ) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 19.2ms | Allocations: 5182)
+Completed 200 OK in 24ms (Views: 7.2ms | ActiveRecord: 13.2ms | Allocations: 6809)
+
+
+Started GET "/api/cars?year=[2020,]" for ::1 at 2020-11-20 11:09:31 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2020,]"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1121)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/api/cars_controller.rb:38:in `index'
+Started PUT "/__web_console/repl_sessions/70923cebb76e9b9db167a48cb1d149c8" for ::1 at 2020-11-20 11:10:01 +0100
+Started PUT "/__web_console/repl_sessions/70923cebb76e9b9db167a48cb1d149c8" for ::1 at 2020-11-20 11:10:06 +0100
+Started PUT "/__web_console/repl_sessions/70923cebb76e9b9db167a48cb1d149c8" for ::1 at 2020-11-20 11:10:08 +0100
+Started PUT "/__web_console/repl_sessions/70923cebb76e9b9db167a48cb1d149c8" for ::1 at 2020-11-20 11:10:21 +0100
+Started PUT "/__web_console/repl_sessions/70923cebb76e9b9db167a48cb1d149c8" for ::1 at 2020-11-20 11:10:25 +0100
+Started PUT "/__web_console/repl_sessions/70923cebb76e9b9db167a48cb1d149c8" for ::1 at 2020-11-20 11:10:30 +0100
+Started PUT "/__web_console/repl_sessions/70923cebb76e9b9db167a48cb1d149c8" for ::1 at 2020-11-20 11:10:37 +0100
+Started PUT "/__web_console/repl_sessions/70923cebb76e9b9db167a48cb1d149c8" for ::1 at 2020-11-20 11:10:39 +0100
+Started PUT "/__web_console/repl_sessions/70923cebb76e9b9db167a48cb1d149c8" for ::1 at 2020-11-20 11:10:59 +0100
+Started PUT "/__web_console/repl_sessions/70923cebb76e9b9db167a48cb1d149c8" for ::1 at 2020-11-20 11:11:34 +0100
+Started PUT "/__web_console/repl_sessions/70923cebb76e9b9db167a48cb1d149c8" for ::1 at 2020-11-20 11:11:37 +0100
+Started GET "/api/cars?year=[2020,]" for ::1 at 2020-11-20 11:12:00 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2020,]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.year::INTEGER >=2020 ) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 8.9ms | Allocations: 4236)
+Completed 200 OK in 14ms (Views: 7.1ms | ActiveRecord: 3.1ms | Allocations: 5864)
+
+
+Started GET "/api/cars?year=[,2015]" for ::1 at 2020-11-20 11:12:18 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[,2015]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.year::INTEGER <=2015 ) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.4ms | Allocations: 1192)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 1757)
+
+
+Started GET "/api/cars?year=[2013,2015]" for ::1 at 2020-11-20 11:12:27 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"year"=>"[2013,2015]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.year::INTEGER >= 2013 AND cars.year::INTEGER <= 2015 ) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.7ms | Allocations: 1108)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 1676)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at C:/Users/lydav/Desktop/github8real/ruby-on-rails-project/config/environment.rb:5)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (4.2ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Toyota"], ["model", "Prius"], ["year", "2018"], ["created_at", "2020-11-20 10:22:17.325862"], ["updated_at", "2020-11-20 10:22:17.325862"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.2ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Toyota"], ["model", "MKZ"], ["year", "2015"], ["created_at", "2020-11-20 10:22:17.334301"], ["updated_at", "2020-11-20 10:22:17.334301"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.3ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Buick"], ["model", "Verano"], ["year", "2020"], ["created_at", "2020-11-20 10:22:17.337779"], ["updated_at", "2020-11-20 10:22:17.337779"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.3ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Honda"], ["model", "Camry"], ["year", "2017"], ["created_at", "2020-11-20 10:22:17.341205"], ["updated_at", "2020-11-20 10:22:17.341205"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.3ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Toyota"], ["model", "328i"], ["year", "2018"], ["created_at", "2020-11-20 10:22:17.344765"], ["updated_at", "2020-11-20 10:22:17.344765"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.3ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Ford"], ["model", "M3"], ["year", "2019"], ["created_at", "2020-11-20 10:22:17.348773"], ["updated_at", "2020-11-20 10:22:17.348773"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.4ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "M3"], ["year", "2012"], ["created_at", "2020-11-20 10:22:17.353011"], ["updated_at", "2020-11-20 10:22:17.353011"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.4ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Dodge"], ["model", "S5"], ["year", "2019"], ["created_at", "2020-11-20 10:22:17.359656"], ["updated_at", "2020-11-20 10:22:17.359656"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.4ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "BMW"], ["model", "Altima"], ["year", "2009"], ["created_at", "2020-11-20 10:22:17.365517"], ["updated_at", "2020-11-20 10:22:17.365517"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.4ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Ford"], ["model", "F150"], ["year", "2019"], ["created_at", "2020-11-20 10:22:17.371702"], ["updated_at", "2020-11-20 10:22:17.371702"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.9ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Toyota"], ["model", "Durango"], ["year", "2020"], ["created_at", "2020-11-20 10:22:17.377838"], ["updated_at", "2020-11-20 10:22:17.377838"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.3ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "Ram"], ["year", "2016"], ["created_at", "2020-11-20 10:22:17.383149"], ["updated_at", "2020-11-20 10:22:17.383149"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.4ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Buick"], ["model", "Navigator"], ["year", "2007"], ["created_at", "2020-11-20 10:22:17.387480"], ["updated_at", "2020-11-20 10:22:17.387480"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.4ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Chevy"], ["model", "LaCrosse"], ["year", "2016"], ["created_at", "2020-11-20 10:22:17.393385"], ["updated_at", "2020-11-20 10:22:17.393385"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.3ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "Chevy"], ["model", "Durango"], ["year", "2020"], ["created_at", "2020-11-20 10:22:17.398808"], ["updated_at", "2020-11-20 10:22:17.398808"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/cars?created_at=2020-11-13,2020-11-20" for ::1 at 2020-11-20 11:23:56 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"2020-11-13,2020-11-20"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at::text LIKE '2020-11-13%' OR created_at::text LIKE '2020-11-20%' ) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 8.7ms | Allocations: 5975)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 1.8ms | Allocations: 7612)
+
+
+Started GET "/api/cars?created_at=2020-11-20" for ::1 at 2020-11-20 11:24:11 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"2020-11-20"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at::text LIKE '2020-11-20%' ) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.2ms | Allocations: 1949)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 2515)
+
+
+Started GET "/api/cars?created_at=[2020-11-20,]" for ::1 at 2020-11-20 11:28:32 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-20,]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (6.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at::DATE >=2020-11-20) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 7.6ms | Allocations: 2114)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 6.2ms | Allocations: 3717)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERREUR:  l'opérateur n'existe pas : date >= integer
+LINE 1: ...rs".* FROM "cars" WHERE ( ( cars.created_at::DATE >=2020-11-...
+                                                             ^
+HINT:  Aucun opérateur ne correspond au nom donné et aux types d'arguments.
+Vous devez ajouter des conversions explicites de type.
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars?created_at=[2020-11-20,]" for ::1 at 2020-11-20 11:29:00 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-20,]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at::DATE >= 2020-11-20) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.8ms | Allocations: 2113)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms | Allocations: 3717)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERREUR:  l'opérateur n'existe pas : date >= integer
+LINE 1: ...rs".* FROM "cars" WHERE ( ( cars.created_at::DATE >= 2020-11...
+                                                             ^
+HINT:  Aucun opérateur ne correspond au nom donné et aux types d'arguments.
+Vous devez ajouter des conversions explicites de type.
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars?created_at=[2020-11-20,]" for ::1 at 2020-11-20 11:29:30 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-20,]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at::DATETIME >= 2020-11-20) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.0ms | Allocations: 2113)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.9ms | Allocations: 3717)
+
+
+  
+ActionView::Template::Error (PG::UndefinedObject: ERREUR:  le type « datetime » n'existe pas
+LINE 1: ...T "cars".* FROM "cars" WHERE ( ( cars.created_at::DATETIME >...
+                                                             ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars?created_at=[2020-11-20,]" for ::1 at 2020-11-20 11:30:19 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-20,]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= 2020-11-20) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.4ms | Allocations: 2113)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.9ms | Allocations: 3717)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERREUR:  l'opérateur n'existe pas : timestamp without time zone >= integer
+LINE 1: ...CT "cars".* FROM "cars" WHERE ( ( cars.created_at >= 2020-11...
+                                                             ^
+HINT:  Aucun opérateur ne correspond au nom donné et aux types d'arguments.
+Vous devez ajouter des conversions explicites de type.
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars?created_at=[2020-11-20,]" for ::1 at 2020-11-20 11:31:26 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-20,]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= 2020-11-20::DATE) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.7ms | Allocations: 2113)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.3ms | Allocations: 3719)
+
+
+  
+ActionView::Template::Error (PG::CannotCoerce: ERREUR:  ne peut pas convertir le type integer en date
+LINE 1: ...FROM "cars" WHERE ( ( cars.created_at >= 2020-11-20::DATE) )
+                                                              ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars?created_at=[2020-11-20,]" for ::1 at 2020-11-20 11:32:56 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-20,]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST(2020-11-20 AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.8ms | Allocations: 2113)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms | Allocations: 3719)
+
+
+  
+ActionView::Template::Error (PG::CannotCoerce: ERREUR:  ne peut pas convertir le type integer en date
+LINE 1: ..."cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST(2020-...
+                                                             ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars?created_at=[2020-11-20,]" for ::1 at 2020-11-20 11:34:35 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-20,]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST('2020-11-20' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 19.5ms | Allocations: 5032)
+Completed 200 OK in 24ms (Views: 7.2ms | ActiveRecord: 13.3ms | Allocations: 6666)
+
+
+Started GET "/api/cars?created_at=[,2020-11-20]" for ::1 at 2020-11-20 11:35:04 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[,2020-11-20]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at  CAST('2020-11-20' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.3ms | Allocations: 2163)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.3ms | Allocations: 2694)
+
+
+  
+ActionView::Template::Error (PG::SyntaxError: ERREUR:  erreur de syntaxe sur ou près de « CAST »
+LINE 1: ...T "cars".* FROM "cars" WHERE ( ( cars.created_at  CAST('2020...
+                                                             ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars?created_at=[,2020-11-20]" for ::1 at 2020-11-20 11:35:51 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[,2020-11-20]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at <= CAST('2020-11-20' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 8.2ms | Allocations: 5009)
+Completed 200 OK in 15ms (Views: 6.9ms | ActiveRecord: 2.7ms | Allocations: 6632)
+
+
+Started GET "/api/cars?created_at=[,2020-11-11]" for ::1 at 2020-11-20 11:36:11 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[,2020-11-11]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at <= CAST('2020-11-11' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.3ms | Allocations: 687)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.5ms | Allocations: 1244)
+
+
+Started GET "/api/cars?created_at=[,2020-11-13]" for ::1 at 2020-11-20 11:36:16 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[,2020-11-13]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at <= CAST('2020-11-13' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.1ms | Allocations: 687)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 1258)
+
+
+Started GET "/api/cars?created_at=[,2020-11-14]" for ::1 at 2020-11-20 11:36:26 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[,2020-11-14]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at <= CAST('2020-11-14' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.4ms | Allocations: 1781)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.4ms | Allocations: 2340)
+
+
+Started GET "/api/cars?created_at=[2020-11-12,2020-11-14]" for ::1 at 2020-11-20 11:37:14 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-12,2020-11-14]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST('2020-11-12' AS DATE) AND cars.created_at <= CAST('2020-11-14' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.9ms | Allocations: 1781)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.5ms | Allocations: 2347)
+
+
+Started GET "/api/cars?created_at=[2020-11-18,2020-11-20]" for ::1 at 2020-11-20 11:37:25 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-18,2020-11-20]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST('2020-11-18' AS DATE) AND cars.created_at <= CAST('2020-11-20' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.4ms | Allocations: 771)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 1353)
+
+
+Started GET "/api/cars?created_at=[2020-11-18,2020-11-21]" for ::1 at 2020-11-20 11:37:31 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-18,2020-11-21]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST('2020-11-18' AS DATE) AND cars.created_at <= CAST('2020-11-21' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.5ms | Allocations: 2033)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.5ms | Allocations: 2605)
+
+
+Started GET "/api/cars?created_at=[,2020-11-20]" for ::1 at 2020-11-20 11:43:16 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[,2020-11-20]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (1.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at <= CAST('2020-11-20' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 8.2ms | Allocations: 4899)
+Completed 200 OK in 14ms (Views: 7.6ms | ActiveRecord: 1.6ms | Allocations: 6526)
+
+
+Started GET "/api/cars?created_at=[2020-11-12,2020-11-20]" for ::1 at 2020-11-20 11:43:31 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-12,2020-11-20]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST('2020-11-12' AS DATE) AND cars.created_at <= CAST('2020-11-20' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 1.9ms | Allocations: 1949)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 2521)
+
+
+Started GET "/api/cars?created_at=[2020-11-12,2020-11-21]" for ::1 at 2020-11-20 11:43:41 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-12,2020-11-21]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST('2020-11-12' AS DATE) AND cars.created_at <= CAST('2020-11-21' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.8ms | Allocations: 3209)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 3789)
+
+
+Started GET "/api/cars?created_at=[,2020-11-20]" for ::1 at 2020-11-20 11:44:15 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[,2020-11-20]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at <= CAST('2020-11-20' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 4.4ms | Allocations: 1949)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 2518)
+
+
+Started GET "/api/cars?created_at=[,2020-11-21]" for ::1 at 2020-11-20 11:44:30 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[,2020-11-21]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at <= CAST('2020-11-21' AS DATE)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.0ms | Allocations: 3209)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.5ms | Allocations: 3768)
+
+
+Started GET "/api/cars?created_at=[2020-11-13,]" for ::1 at 2020-11-20 11:44:52 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-13,]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (6.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST('2020-11-13' AS DATE OR cars.created_at::text LIKE 2020-11-13)) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 7.5ms | Allocations: 2163)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 6.2ms | Allocations: 2710)
+
+
+  
+ActionView::Template::Error (PG::SyntaxError: ERREUR:  erreur de syntaxe sur ou près de « OR »
+LINE 1: ... ( ( cars.created_at >= CAST('2020-11-13' AS DATE OR cars.cr...
+                                                             ^
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars?created_at=[2020-11-13,]" for ::1 at 2020-11-20 11:45:22 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-13,]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (2.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST('2020-11-13' AS DATE) OR cars.created_at::text LIKE 2020-11-13) )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.9ms | Allocations: 2113)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.1ms | Allocations: 3722)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERREUR:  l'opérateur n'existe pas : text ~~ integer
+LINE 1: ...ST('2020-11-13' AS DATE) OR cars.created_at::text LIKE 2020-...
+                                                             ^
+HINT:  Aucun opérateur ne correspond au nom donné et aux types d'arguments.
+Vous devez ajouter des conversions explicites de type.
+):
+    1: 
+    2: json.array! @cars do |car|
+    3:     
+    4:     json.extract! car, :id, :brand , :model , :year
+    5: end
+  
+app/views/api/cars/index.json.jbuilder:2
+Started GET "/api/cars?created_at=[2020-11-13,]" for ::1 at 2020-11-20 11:45:47 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-13,]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST('2020-11-13' AS DATE) OR cars.created_at::text LIKE '2020-11-13') )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 18.5ms | Allocations: 6292)
+Completed 200 OK in 25ms (Views: 8.3ms | ActiveRecord: 11.4ms | Allocations: 7931)
+
+
+Started GET "/api/cars?created_at=[2020-11-14,]" for ::1 at 2020-11-20 11:45:58 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-14,]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST('2020-11-14' AS DATE) OR cars.created_at::text LIKE '2020-11-14') )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.6ms | Allocations: 2117)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 2694)
+
+
+Started GET "/api/cars?created_at=[,2020-11-20]" for ::1 at 2020-11-20 11:46:48 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[,2020-11-20]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at <= CAST('2020-11-20' AS DATE) OR cars.created_at::text LIKE '2020-11-20') )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 9.7ms | Allocations: 4978)
+Completed 200 OK in 15ms (Views: 6.9ms | ActiveRecord: 3.9ms | Allocations: 6622)
+
+
+Started GET "/api/cars?created_at=[,2020-11-21]" for ::1 at 2020-11-20 11:46:58 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[,2020-11-21]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at <= CAST('2020-11-21' AS DATE) OR cars.created_at::text LIKE '2020-11-21') )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 5.1ms | Allocations: 3209)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.5ms | Allocations: 3787)
+
+
+Started GET "/api/cars?created_at=[,2020-11-20]" for ::1 at 2020-11-20 11:47:07 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[,2020-11-20]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at <= CAST('2020-11-20' AS DATE) OR cars.created_at::text LIKE '2020-11-20') )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.3ms | Allocations: 1949)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 2507)
+
+
+Started GET "/api/cars?created_at=[,2020-11-20]" for ::1 at 2020-11-20 11:48:39 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[,2020-11-20]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at <= CAST('2020-11-20' AS DATE) OR cars.created_at::text LIKE '2020-11-20%') )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 10.2ms | Allocations: 6238)
+Completed 200 OK in 16ms (Views: 7.4ms | ActiveRecord: 3.9ms | Allocations: 7878)
+
+
+Started GET "/api/cars?created_at=[2020-11-13,2020-11-20]" for ::1 at 2020-11-20 11:50:09 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-13,2020-11-20]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST('2020-11-13' AS DATE) AND cars.created_at <= CAST('2020-11-20' AS DATE) OR  cars.created_at::text LIKE '2020-11-13%' OR cars.created_at::text LIKE '2020-11-20%') )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 17.5ms | Allocations: 6238)
+Completed 200 OK in 24ms (Views: 15.4ms | ActiveRecord: 3.4ms | Allocations: 7868)
+
+
+Started GET "/api/cars?created_at=[2020-11-13,2020-11-19]" for ::1 at 2020-11-20 11:50:17 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-13,2020-11-19]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST('2020-11-13' AS DATE) AND cars.created_at <= CAST('2020-11-19' AS DATE) OR  cars.created_at::text LIKE '2020-11-13%' OR cars.created_at::text LIKE '2020-11-19%') )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 2.8ms | Allocations: 1949)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.5ms | Allocations: 2521)
+
+
+Started GET "/api/cars?created_at=[2020-11-14,2020-11-19]" for ::1 at 2020-11-20 11:50:24 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"created_at"=>"[2020-11-14,2020-11-19]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.created_at >= CAST('2020-11-14' AS DATE) AND cars.created_at <= CAST('2020-11-19' AS DATE) OR  cars.created_at::text LIKE '2020-11-14%' OR cars.created_at::text LIKE '2020-11-19%') )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.5ms | Allocations: 855)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.5ms | Allocations: 1441)
+
+
+Started GET "/api/cars?updated_at=[2020-11-14,2020-11-19]" for ::1 at 2020-11-20 11:51:35 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"updated_at"=>"[2020-11-14,2020-11-19]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.updated_at >= CAST('2020-11-14' AS DATE) AND cars.updated_at <= CAST('2020-11-19' AS DATE) OR  cars.updated_at::text LIKE '2020-11-14%' OR cars.updated_at::text LIKE '2020-11-19%') )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 8.6ms | Allocations: 3900)
+Completed 200 OK in 14ms (Views: 6.7ms | ActiveRecord: 2.9ms | Allocations: 5542)
+
+
+Started GET "/api/cars?updated_at=[2020-11-12,2020-11-19]" for ::1 at 2020-11-20 11:51:41 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"updated_at"=>"[2020-11-12,2020-11-19]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.updated_at >= CAST('2020-11-12' AS DATE) AND cars.updated_at <= CAST('2020-11-19' AS DATE) OR  cars.updated_at::text LIKE '2020-11-12%' OR cars.updated_at::text LIKE '2020-11-19%') )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.1ms | Allocations: 1949)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 2529)
+
+
+Started GET "/api/cars?updated_at=[2020-11-12,2020-11-20]" for ::1 at 2020-11-20 11:51:45 +0100
+Processing by Api::CarsController#index as JSON
+  Parameters: {"updated_at"=>"[2020-11-12,2020-11-20]"}
+  Rendering api/cars/index.json.jbuilder
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE ( ( cars.updated_at >= CAST('2020-11-12' AS DATE) AND cars.updated_at <= CAST('2020-11-20' AS DATE) OR  cars.updated_at::text LIKE '2020-11-12%' OR cars.updated_at::text LIKE '2020-11-20%') )[0m
+  ↳ app/views/api/cars/index.json.jbuilder:2
+  Rendered api/cars/index.json.jbuilder (Duration: 3.0ms | Allocations: 3209)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 3793)
+
+
