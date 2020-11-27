@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @cars_detail.Rate %>
+</p>
+
+<p>
+  <strong>Avis:</strong>
+  <%= @cars_detail.Avis %>
+</p>
+
+<p>
+  <strong>Cars:</strong>
+  <%= @cars_detail.car_id %>
+</p>
+
+<%= link_to 'Edit', edit_car_cars_detail_path(@cars_detail) %> |
+<%= link_to 'Back', car_cars_details_path %>

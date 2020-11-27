@@ -42,11 +42,29 @@ class Api::CarsController < Api::BaseController
 
     end
 
+  # PATCH/PUT /cars_details/1
+  # PATCH/PUT /cars_details/1.json
+  def update
+    
+    respond_to do |format|
+      
+      if @cars.update(car_params)
+        
+        redirect_to @car
+  
+      else
+        format.html { render :edit }
+        format.json { render json: @cars.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
     def show
         # @cars = policy_scope(Car)
         @car = Car.find(params[:id])
 
-        redirect_to @car
+        # redirect_to @api_car
         # @authorize @car
     end
 
@@ -84,6 +102,13 @@ class Api::CarsController < Api::BaseController
     response :unauthorized
     response :not_acceptable
    end
+
+   swagger_api :update do |api|
+    summary "Update a car"
+    response :unauthorized
+    response :not_acceptable
+    response :unprocessable_entity
+end
 
    swagger_api :destroy do |api|
        summary "Destroy an existing car"

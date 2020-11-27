@@ -22,6 +22,7 @@ class CarsController < ApplicationController
 
   # GET /cars/1/edit
   def edit
+    @cars = policy_scope(Car)
   end
 
   # POST /cars
