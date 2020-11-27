@@ -1,7 +1,7 @@
 # raise
 json.array! @cars_details do |carDetail|
     # raise
-    json.extract! carDetail, :car_id, :Rate , :Avis
+    json.extract! carDetail, :cars_id, :Rate , :Avis
 end
 
 # json.cars_detail do
