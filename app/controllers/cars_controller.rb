@@ -1,4 +1,10 @@
 class CarsController < ApplicationController
+  
+      before_action :authenticate_user! 
+    
+    acts_as_token_authentication_handler_for User
+
+  
   before_action :set_car, only: [:show, :edit, :update, :destroy]
 
   # GET /cars
