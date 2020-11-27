@@ -1,7 +1,7 @@
 class Api::BaseController < ActionController::Base
 
-    before_action :authenticate_user!
-    acts_as_token_authentication_handler_for User
+    #before_action :authenticate_user!
+    #acts_as_token_authentication_handler_for User
 
     include Pundit
     
