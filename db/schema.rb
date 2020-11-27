@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_141110) do
     t.bigint "car_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["car_id"], name: "index_cars_details_on_cars_id"
+    t.index ["car_id"], name: "index_cars_details_on_car_id"
   end
 
   create_table "users", force: :cascade do |t|

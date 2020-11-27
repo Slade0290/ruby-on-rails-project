@@ -10918,3 +10918,197 @@ Processing by Api::CarsDetailsController#index as JSON
 Completed 200 OK in 191ms (Views: 108.2ms | ActiveRecord: 13.7ms | Allocations: 5312)
 
 
+Started GET "/api/cars/1" for ::1 at 2020-11-27 10:33:40 +0100
+Processing by Api::CarsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (3.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_controller.rb:224:in `show'
+  Rendering api/cars/show.json.jbuilder
+  Rendered api/cars/show.json.jbuilder (Duration: 19.6ms | Allocations: 164)
+Completed 200 OK in 371ms (Views: 35.5ms | ActiveRecord: 15.5ms | Allocations: 15615)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at C:/Users/arosf/CoursM2/ruby-on-rails-project/config/environment.rb:5)
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCarsDetails (20201119141110)
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (69.1ms)[0m  [1m[35mDROP TABLE "cars_details"[0m
+  [1m[36mprimary::SchemaMigration Destroy (2.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201119141110"]]
+  [1m[35m (33.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at C:/Users/arosf/CoursM2/ruby-on-rails-project/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCarsDetails (20201119141110)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (67.8ms)[0m  [1m[35mCREATE TABLE "cars_details" ("id" bigserial primary key, "Rate" character varying, "Avis" character varying, "car_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_07528e38db"
+FOREIGN KEY ("car_id")
+  REFERENCES "cars" ("id")
+)[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE  INDEX  "index_cars_details_on_car_id" ON "cars_details"  ("car_id")[0m
+  [1m[36mprimary::SchemaMigration Create (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201119141110"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/cars/5/cars_details" for ::1 at 2020-11-27 12:31:46 +0100
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::CarsDetailsController#index as JSON
+  Parameters: {"car_id"=>"5"}
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (4.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_details_controller.rb:75:in `get_cars_detail'
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 12.9ms | Allocations: 16934)
+
+
+  
+NoMethodError (undefined method `carsDetail' for #<Car:0x000000000ff61328>
+Did you mean?  carsDetails
+               carsDetails=):
+  
+app/controllers/api/cars_details_controller.rb:10:in `index'
+Started PUT "/__web_console/repl_sessions/31aa47e8722230f8105f570f9f7a6b6c" for ::1 at 2020-11-27 12:32:04 +0100
+Started PUT "/__web_console/repl_sessions/31aa47e8722230f8105f570f9f7a6b6c" for ::1 at 2020-11-27 12:32:05 +0100
+Started PUT "/__web_console/repl_sessions/31aa47e8722230f8105f570f9f7a6b6c" for ::1 at 2020-11-27 12:32:08 +0100
+Started PUT "/__web_console/repl_sessions/31aa47e8722230f8105f570f9f7a6b6c" for ::1 at 2020-11-27 12:32:19 +0100
+Started PUT "/__web_console/repl_sessions/31aa47e8722230f8105f570f9f7a6b6c" for ::1 at 2020-11-27 12:32:21 +0100
+Started PUT "/__web_console/repl_sessions/31aa47e8722230f8105f570f9f7a6b6c" for ::1 at 2020-11-27 12:32:34 +0100
+Started PUT "/__web_console/repl_sessions/31aa47e8722230f8105f570f9f7a6b6c" for ::1 at 2020-11-27 12:32:44 +0100
+  [1m[36mCarsDetail Load (2.7ms)[0m  [1m[34mSELECT "cars_details".* FROM "cars_details" WHERE "cars_details"."car_id" = $1 LIMIT $2[0m  [["car_id", 5], ["LIMIT", 11]]
+Started GET "/api/cars/5/cars_details" for ::1 at 2020-11-27 12:33:10 +0100
+Processing by Api::CarsDetailsController#index as JSON
+  Parameters: {"car_id"=>"5"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_details_controller.rb:75:in `get_cars_detail'
+  Rendering api/cars_details/index.json.jbuilder
+  [1m[36mCarsDetail Load (0.6ms)[0m  [1m[34mSELECT "cars_details".* FROM "cars_details" WHERE "cars_details"."car_id" = $1[0m  [["car_id", 5]]
+  ↳ app/views/api/cars_details/index.json.jbuilder:2
+  Rendered api/cars_details/index.json.jbuilder (Duration: 16.8ms | Allocations: 1255)
+Completed 200 OK in 202ms (Views: 19.0ms | ActiveRecord: 28.9ms | Allocations: 17303)
+
+
+Started GET "/cars" for ::1 at 2020-11-27 12:33:33 +0100
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:16
+  Rendered cars/index.html.erb within layouts/application (Duration: 58.3ms | Allocations: 3070)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 468ms (Views: 402.0ms | ActiveRecord: 1.6ms | Allocations: 10845)
+
+
+Started GET "/api/cars/1/cars_details" for ::1 at 2020-11-27 12:33:42 +0100
+Processing by Api::CarsDetailsController#index as JSON
+  Parameters: {"car_id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_details_controller.rb:75:in `get_cars_detail'
+  Rendering api/cars_details/index.json.jbuilder
+  [1m[36mCarsDetail Load (1.0ms)[0m  [1m[34mSELECT "cars_details".* FROM "cars_details" WHERE "cars_details"."car_id" = $1[0m  [["car_id", 1]]
+  ↳ app/views/api/cars_details/index.json.jbuilder:2
+  Rendered api/cars_details/index.json.jbuilder (Duration: 9.2ms | Allocations: 786)
+Completed 200 OK in 39ms (Views: 11.8ms | ActiveRecord: 3.1ms | Allocations: 3534)
+
+
+Started GET "/cars/1/cars_details" for ::1 at 2020-11-27 12:33:54 +0100
+Processing by CarsDetailsController#index as HTML
+  Parameters: {"car_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cars_details_controller.rb:75:in `get_cars_detail'
+  Rendering cars_details/index.html.erb within layouts/application
+  [1m[36mCarsDetail Load (0.7ms)[0m  [1m[34mSELECT "cars_details".* FROM "cars_details" WHERE "cars_details"."car_id" = $1[0m  [["car_id", 1]]
+  ↳ app/views/cars_details/index.html.erb:16
+  Rendered cars_details/index.html.erb within layouts/application (Duration: 41.0ms | Allocations: 1076)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 128ms (Views: 111.3ms | ActiveRecord: 1.8ms | Allocations: 8692)
+
+
+Started GET "/cars/1/cars_details/new" for ::1 at 2020-11-27 12:33:58 +0100
+Processing by CarsDetailsController#new as HTML
+  Parameters: {"car_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cars_details_controller.rb:75:in `get_cars_detail'
+  Rendering cars_details/new.html.erb within layouts/application
+  Rendered cars_details/_form.html.erb (Duration: 59.0ms | Allocations: 1347)
+  Rendered cars_details/new.html.erb within layouts/application (Duration: 91.6ms | Allocations: 1691)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 191ms (Views: 151.3ms | ActiveRecord: 4.2ms | Allocations: 11942)
+
+
+Started POST "/cars/1/cars_details" for ::1 at 2020-11-27 12:34:03 +0100
+Processing by CarsDetailsController#create as HTML
+  Parameters: {"authenticity_token"=>"XMGuYwoYCb6Csx2t8mHUYVv1acy/WMmC5/HxZGfBvBQnyhvAoZoBH1xku6b8t5+y0F97WCJTfTIQrNU8U9M3rw==", "cars_detail"=>{"Rate"=>"6", "Avis"=>"test", "car_id"=>"1"}, "commit"=>"Create Cars detail", "car_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cars_details_controller.rb:75:in `get_cars_detail'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cars_details_controller.rb:35:in `block in create'
+  [1m[36mCarsDetail Create (6.8ms)[0m  [1m[32mINSERT INTO "cars_details" ("Rate", "Avis", "car_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["Rate", "6"], ["Avis", "test"], ["car_id", 1], ["created_at", "2020-11-27 11:34:03.850534"], ["updated_at", "2020-11-27 11:34:03.850534"]]
+  ↳ app/controllers/cars_details_controller.rb:35:in `block in create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cars_details_controller.rb:35:in `block in create'
+Redirected to http://localhost:3000/cars/1/cars_details
+Completed 302 Found in 60ms (ActiveRecord: 10.4ms | Allocations: 5080)
+
+
+Started GET "/cars/1/cars_details" for ::1 at 2020-11-27 12:34:03 +0100
+Processing by CarsDetailsController#index as HTML
+  Parameters: {"car_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cars_details_controller.rb:75:in `get_cars_detail'
+  Rendering cars_details/index.html.erb within layouts/application
+  [1m[36mCarsDetail Load (0.6ms)[0m  [1m[34mSELECT "cars_details".* FROM "cars_details" WHERE "cars_details"."car_id" = $1[0m  [["car_id", 1]]
+  ↳ app/views/cars_details/index.html.erb:16
+  Rendered cars_details/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1013)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 65.8ms | ActiveRecord: 1.8ms | Allocations: 7900)
+
+
+Started GET "/api/cars/1/cars_details" for ::1 at 2020-11-27 12:34:10 +0100
+Processing by Api::CarsDetailsController#index as JSON
+  Parameters: {"car_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_details_controller.rb:75:in `get_cars_detail'
+  Rendering api/cars_details/index.json.jbuilder
+  [1m[36mCarsDetail Load (0.7ms)[0m  [1m[34mSELECT "cars_details".* FROM "cars_details" WHERE "cars_details"."car_id" = $1[0m  [["car_id", 1]]
+  ↳ app/views/api/cars_details/index.json.jbuilder:2
+  Rendered api/cars_details/index.json.jbuilder (Duration: 7.2ms | Allocations: 857)
+Completed 200 OK in 22ms (Views: 9.1ms | ActiveRecord: 1.6ms | Allocations: 3607)
+
+
