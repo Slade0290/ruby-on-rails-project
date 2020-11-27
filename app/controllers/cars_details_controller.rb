@@ -72,7 +72,7 @@ class CarsDetailsController < ApplicationController
 
   private
   def get_cars_detail
-    @car = Car.find(params[:cars_id])
+    @car = Car.find(params[:car_id])
   end
     # Use callbacks to share common setup or constraints between actions.
     def set_cars_detail
@@ -81,6 +81,6 @@ class CarsDetailsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cars_detail_params
-      params.require(:cars_detail).permit(:Rate, :Avis, :cars_id)
+      params.require(:cars_detail).permit(:Rate, :Avis, :car_id)
     end
 end
