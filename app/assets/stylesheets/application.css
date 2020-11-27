@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+
+ html {
+    background: linear-gradient(90deg, #000 50%, #ffed4b 50%);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

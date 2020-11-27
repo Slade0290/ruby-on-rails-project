@@ -1,0 +1,67 @@
+// Place all the styles related to the cars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.main {
+    background-color: rgb(255, 255, 255);
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 2%;
+    text-align: center;
+}
+
+.content {
+    display: flex; 
+    flex-wrap: wrap;   
+}
+
+.item {
+    text-align: right;
+    vertical-align:middle;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 50px;
+    width: 130px;
+    background-color: lightblue;
+    transition: 0.5s;
+}
+
+.item:hover {
+    background-color: rgba(30,144,255, 0.5);
+    cursor: pointer;
+}
+
+.next {
+    margin: 10px;
+    text-decoration: none;
+    transition: 0.5s;
+    color: black;
+}
+.next:hover {
+    font-size: 1.2em;
+}
+
+.a-new-el {
+    font-size: 4em;
+    text-decoration: none;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    background-color: crimson;
+    width: 60px;
+    height: 60px;
+    line-height: 55px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.a-new-el:hover {
+    width: 70px;
+    height: 70px;
+    line-height: 65px;
+    font-size: 5em;
+    right: 45px;
+    top: 25px;
+}

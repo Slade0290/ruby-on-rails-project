@@ -1,0 +1,15 @@
+<div class="main">
+<h1>Black & Yellow - Cars</h1>
+    <div class="content">
+        <% @cars.slice(0, 10).each do |cars| %>
+            <section class="item">
+                <div>ID : <%= cars["id"] %></div>
+                <div>Brand :<%= cars["brand"] %></div>
+                <div>Model : <%= cars["model"] %></div>
+                <div>Year: <%= cars["year"] %></div>
+            </section>
+        <% end %>
+    </div>
+    <a href="#" class="next">Next</a>
+    <a href="#" class="a-new-el">+</a>
+</div>

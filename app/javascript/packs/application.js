@@ -15,3 +15,18 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+// User
+
+
+
+// Cars
+/*
+
+fetch ("https://bnyonrails.herokuapp.com/api/cars")
+    .then(response => response.json())
+    .then((data) => {    
+        console.log(data)
+    }
+);
+*/
