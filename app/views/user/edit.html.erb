@@ -1,3 +1,11 @@
 <div class="main">
-
+<h1><a href="/" class="homepage">Black & Yellow - Cars</a></h1>
+    <div class="content">
+        <section class="item-detail">
+            <div>ID : <%= params[:id] %></div>
+            <div>E-mail : <input class="edit-input" type="text" value=""/></div>
+            <a id="onclick-edit-validation" href="#" class="a-button-el">Validate</a>
+        </section>
+    </div>
+    <a href="/user/<%= params[:id] %>" class="a-user">Back</a>
 </div>
