@@ -206,7 +206,7 @@ class Api::CarsController < Api::BaseController
   def update
     
     respond_to do |format|
-      
+      raise
       if @cars.update(car_params)
         
         redirect_to @car
