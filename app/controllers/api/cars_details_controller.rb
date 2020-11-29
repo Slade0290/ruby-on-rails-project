@@ -1,6 +1,5 @@
 class Api::CarsDetailsController < Api::BaseController
 
-  before_action :get_cars_detail
 
   before_action :set_cars_detail, only: [ :show , :edit, :update, :destroy]
 

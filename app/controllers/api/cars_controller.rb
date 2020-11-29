@@ -1,8 +1,8 @@
 
 class Api::CarsController < Api::BaseController
    
-    # before_action :set_car, only: [:show, :update, :index]
-
+    #before_action :set_car, only: [:show, :update]
+skip_before_action :verify_authenticity_token , only: [:create, :update, :show , :edit]
     swagger_controller :CarsRessources, "Cars Management"
 
     def index
@@ -204,19 +204,18 @@ class Api::CarsController < Api::BaseController
   # PATCH/PUT /cars_details/1
   # PATCH/PUT /cars_details/1.json
   def update
-    
-    respond_to do |format|
-      
-      if @cars.update(car_params)
-        
-        redirect_to @car
+
+     @car = Car.find(params[:id])
+
+      if @car.update(car_params)
+        head(:ok)
+        #format.json { render json: @car }
   
       else
         format.html { render :edit }
         format.json { render json: @cars.errors, status: :unprocessable_entity }
       end
     end
-  end
 
 
     def show
@@ -227,9 +226,9 @@ class Api::CarsController < Api::BaseController
         # @authorize @car
     end
 
-    # def set_car
-    #     @car = Car.find(params[:id])
-    #   end
+    def set_car
+        @car = Car.find(params[:id])
+    end
 
     def car_params
         params.require(:car).permit(:brand, :model, :year)
@@ -267,7 +266,7 @@ class Api::CarsController < Api::BaseController
     response :unauthorized
     response :not_acceptable
     response :unprocessable_entity
-end
+    end
 
    swagger_api :destroy do |api|
        summary "Destroy an existing car"
@@ -276,5 +275,4 @@ end
        response :not_found
    end
  
-  
 end
