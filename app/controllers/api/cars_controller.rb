@@ -182,11 +182,11 @@ skip_before_action :verify_authenticity_token , only: [:create, :update, :show ,
         @car = Car.new(car_params)
 
         if @car.save
-            #  head(:ok)
-            redirect_to @car
+             head(:ok)
+            # redirect_to @car
         else
-            head(:failed) 
-            # render json: @car , status: :failed 
+           head(:failed)
+           render json: @car , status: :failed
         end
     end  
     
