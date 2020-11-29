@@ -204,12 +204,21 @@ skip_before_action :verify_authenticity_token , only: [:create, :update, :show ,
   # PATCH/PUT /cars_details/1
   # PATCH/PUT /cars_details/1.json
   def update
+<<<<<<< HEAD
 
      @car = Car.find(params[:id])
 
       if @car.update(car_params)
         head(:ok)
         #format.json { render json: @car }
+=======
+    
+    respond_to do |format|
+      raise
+      if @cars.update(car_params)
+        
+        redirect_to @car
+>>>>>>> 62004a1ec60ec0be3c146d130aa2885b18213fe5
   
       else
         format.html { render :edit }
@@ -275,4 +284,6 @@ skip_before_action :verify_authenticity_token , only: [:create, :update, :show ,
        response :not_found
    end
  
+
 end
+
