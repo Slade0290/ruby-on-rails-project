@@ -1,3 +1,11 @@
 <div class="main">
-
+<h1><a href="/" class="homepage">Black & Yellow - Cars</a></h1>
+    <div class="content">
+        <section class="item-detail">
+            <div class="item-detail-info">ID : <%= params[:id] %></div>
+            <div class="item-detail-info">E-mail :</div>
+            <a href="/user/<%= params[:id] %>/edit" class="a-button-el">Edit</a>
+        </section>
+    </div>
+    <a href="/cars/" class="a-user">Back</a>
 </div>

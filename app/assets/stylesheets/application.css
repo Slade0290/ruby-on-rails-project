@@ -19,3 +19,16 @@
     background: linear-gradient(90deg, #000 50%, #ffed4b 50%);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.homepage {
+    text-decoration: none;
+    color: black;
+    transition: 0.8s;
+    padding: 15px;
+}
+
+.homepage:hover {
+    background-color: black;
+    color: yellow;
+    padding: 15px;
+}

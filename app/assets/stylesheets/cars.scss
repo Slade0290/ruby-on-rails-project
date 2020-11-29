@@ -25,11 +25,28 @@
     width: 130px;
     background-color: lightblue;
     transition: 0.5s;
+    text-decoration: none;
+    color: black;
 }
 
 .item:hover {
     background-color: rgba(30,144,255, 0.5);
     cursor: pointer;
+    border-radius: 50px 0 0 0;
+}
+
+.item-detail {
+    text-align: left;
+    margin: auto;
+    padding: 50px;
+    width: 550px;
+    background-color: lightblue;
+    text-decoration: none;
+    color: black;
+
+    div {
+        margin: 10px;
+    }
 }
 
 .next {
@@ -39,7 +56,7 @@
     color: black;
 }
 .next:hover {
-    font-size: 1.2em;
+    letter-spacing: 5px;
 }
 
 .a-new-el {
@@ -64,4 +81,28 @@
     font-size: 5em;
     right: 45px;
     top: 25px;
+}
+
+.a-button-el {
+    text-decoration: none;
+    float: left;
+    padding: 10px;
+    position: relative;
+    color: white;
+    background-color: rgb(220,20,60);
+    transition: 0.3s;
+}
+
+
+.a-button-el:hover {
+    background-color: rgba(220,20,60,0.5);
+    color: black;
+}
+
+.edit-input {
+    display: inline-block;
+}
+
+.item-detail-info {
+    margin-top: 30px !important;
 }

@@ -1,15 +1,13 @@
 <div class="main">
-<h1>Black & Yellow - Cars</h1>
+<h1><a href="/" class="homepage">Black & Yellow - Cars</a></h1>
     <div class="content">
-        <% @cars.slice(0, 10).each do |cars| %>
-            <section class="item">
-                <div>ID : <%= cars["id"] %></div>
-                <div>Brand :<%= cars["brand"] %></div>
-                <div>Model : <%= cars["model"] %></div>
-                <div>Year: <%= cars["year"] %></div>
-            </section>
-        <% end %>
+        <section class="item-detail">
+            <div class="item-detail-info">ID : <%= params[:id] %></div>
+            <div class="item-detail-info">Brand : <%= @car["car"]["brand"] %></div>
+            <div class="item-detail-info">Model : <%= @car["car"]["model"] %></div>
+            <div class="item-detail-info">Year : <%= @car["car"]["year"] %></div>
+            <a href="/cars/<%= params[:id] %>/edit" class="a-button-el">Edit</a>
+        </section>
     </div>
-    <a href="#" class="next">Next</a>
-    <a href="#" class="a-new-el">+</a>
+    <a href="/cars/" class="a-user">Back</a>
 </div>

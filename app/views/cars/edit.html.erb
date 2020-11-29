@@ -1,3 +1,13 @@
 <div class="main">
-
+<h1><a href="/" class="homepage">Black & Yellow - Cars</a></h1>
+    <div class="content">
+        <section class="item-detail">
+            <div>ID : <%= params[:id] %></div>
+            <div>Brand : <input class="edit-input" type="text" value="<%= @car["car"]["brand"] %>"/></div>
+            <div>Model : <input class="edit-input" type="text" value="<%= @car["car"]["model"] %>"/></div>
+            <div>Year : <input class="edit-input" type="text" value="<%= @car["car"]["year"] %>"/></div>
+            <a id="onclick-edit-validation" href="#" class="a-button-el">Validate</a>
+        </section>
+    </div>
+    <a href="/cars/<%= params[:id] %>" class="a-user">Back</a>
 </div>
