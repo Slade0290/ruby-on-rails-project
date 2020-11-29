@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/user/:id/edit', to: 'user#edit'
   # get 'user/detail/:id'
   get 'cars/create'
+  get 'cars/search'
   get '/cars', to: 'cars#index'
   get '/cars/:id', to: 'cars#show'
   get '/cars/:id/edit', to: 'cars#edit'

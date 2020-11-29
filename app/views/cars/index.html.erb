@@ -1,5 +1,9 @@
 <div class="main">
 <h1><a href="/" class="homepage">Black & Yellow - Cars</a></h1>
+<div>
+    <a href="/cars/search" class="btn-search" id="search_btn">Search</a>
+</div>
+<br />
     <div class="content">
         <% @cars.slice(0, 10).each do |cars| %>
             <a href="/cars/<%= cars["id"] %>" class="item">
