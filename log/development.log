@@ -11632,3 +11632,108 @@ Processing by Api::CarsController#show as JSON
 Completed 200 OK in 16ms (Views: 5.3ms | ActiveRecord: 1.3ms | Allocations: 1185)
 
 
+Started PATCH "/api/cars/2" for ::1 at 2020-11-29 22:58:37 +0100
+  
+SyntaxError (C:/Users/arosf/CoursM2/bynonrails/ruby-on-rails-project/app/controllers/api/cars_controller.rb:207: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+C:/Users/arosf/CoursM2/bynonrails/ruby-on-rails-project/app/controllers/api/cars_controller.rb:214: syntax error, unexpected ===, expecting `end'
+=======
+^~~
+C:/Users/arosf/CoursM2/bynonrails/ruby-on-rails-project/app/controllers/api/cars_controller.rb:221: syntax error, unexpected >>, expecting `end'
+>>>>>>> 62004a1ec60ec0be3c146d1...
+^~
+C:/Users/arosf/CoursM2/bynonrails/ruby-on-rails-project/app/controllers/api/cars_controller.rb:289: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/cars_controller.rb:207: syntax error, unexpected <<
+app/controllers/api/cars_controller.rb:214: syntax error, unexpected ===, expecting `end'
+app/controllers/api/cars_controller.rb:221: syntax error, unexpected >>, expecting `end'
+app/controllers/api/cars_controller.rb:289: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:207: syntax error, unexpected <<
+app/controllers/api/cars_controller.rb:214: syntax error, unexpected ===, expecting `end'
+app/controllers/api/cars_controller.rb:221: syntax error, unexpected >>, expecting `end'
+app/controllers/api/cars_controller.rb:289: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/cars_controller.rb:207: syntax error, unexpected <<
+app/controllers/api/cars_controller.rb:214: syntax error, unexpected ===, expecting `end'
+app/controllers/api/cars_controller.rb:221: syntax error, unexpected >>, expecting `end'
+app/controllers/api/cars_controller.rb:289: syntax error, unexpected end-of-input, expecting `end'
+Started PATCH "/api/cars/2" for ::1 at 2020-11-29 23:01:41 +0100
+Processing by Api::CarsController#update as JSON
+  Parameters: {"car"=>{"brand"=>"Audi", "model"=>"Ram", "year"=>"2019"}, "id"=>"2"}
+  [1m[36mCar Load (5.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_controller.rb:208:in `update'
+Completed 200 OK in 266ms (ActiveRecord: 102.9ms | Allocations: 5886)
+
+
+Started POST "/api/cars" for ::1 at 2020-11-29 23:01:56 +0100
+Processing by Api::CarsController#create as JSON
+  Parameters: {"car"=>{"brand"=>"test", "model"=>"test", "year"=>"test"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/cars_controller.rb:184:in `create'
+  [1m[36mCar Create (11.6ms)[0m  [1m[32mINSERT INTO "cars" ("brand", "model", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["brand", "test"], ["model", "test"], ["year", "test"], ["created_at", "2020-11-29 22:01:57.404906"], ["updated_at", "2020-11-29 22:01:57.404906"]]
+  ↳ app/controllers/api/cars_controller.rb:184:in `create'
+  [1m[35m (17.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/cars_controller.rb:184:in `create'
+Redirected to http://localhost:3000/cars/17
+Completed 302 Found in 107ms (ActiveRecord: 30.1ms | Allocations: 2889)
+
+
+Started GET "/cars/17" for ::1 at 2020-11-29 23:01:57 +0100
+Processing by CarsController#show as */*
+  Parameters: {"id"=>"17"}
+Completed 401 Unauthorized in 28ms (ActiveRecord: 0.0ms | Allocations: 1046)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-29 23:01:58 +0100
+Processing by Users::SessionsController#new as */*
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.1ms | Allocations: 143)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 37.7ms | Allocations: 1058)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 296ms (Views: 185.7ms | ActiveRecord: 11.8ms | Allocations: 13511)
+
+
+Started POST "/api/cars/17" for ::1 at 2020-11-29 23:02:36 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/cars/17"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/cars/17" for ::1 at 2020-11-29 23:02:46 +0100
+Processing by Api::CarsController#show as JSON
+  Parameters: {"car"=>{"brand"=>"test", "model"=>"test", "year"=>"test"}, "id"=>"17"}
+  [1m[36mCar Load (1.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/cars_controller.rb:223:in `show'
+  Rendering api/cars/show.json.jbuilder
+  Rendered api/cars/show.json.jbuilder (Duration: 3.2ms | Allocations: 93)
+Completed 200 OK in 16ms (Views: 7.6ms | ActiveRecord: 1.1ms | Allocations: 1347)
+
+
