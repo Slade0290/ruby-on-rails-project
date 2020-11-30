@@ -3,6 +3,8 @@ class Api::BaseController < ActionController::Base
     #before_action :authenticate_user!
     #acts_as_token_authentication_handler_for User
 
+    protect_from_forgery with: :null_session
+
     include Pundit
     
     after_action :verify_authorized, except: [:home, :index, :create, :new, :destroy, :show, :update, :edit], unless: :skip_pundit?  

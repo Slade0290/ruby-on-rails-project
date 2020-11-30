@@ -2,7 +2,9 @@
 
 class Users::SessionsController < Devise::SessionsController
 
-  
+      clear_respond_to
+      respond_to :json
+
   before_action :configure_sign_in_params, only: [:create ,:new,:destroy]
 
   # GET /resource/sign_in
@@ -12,7 +14,8 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    super
+      super
+
   end
 
   # DELETE /resource/sign_out
