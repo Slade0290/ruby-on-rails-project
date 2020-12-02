@@ -2,16 +2,20 @@ class PaginatesController < ApplicationController
 
     require 'open-uri'
     require 'json'
+
+
+    $pgurl = 'https://bnyonrails.herokuapp.com/api/cars?page='
+
   
     def prev
-      $urlprev = 'http://localhost:3000/api/cars?page=1'
+      $urlprev = $pgurl + "1"
   
       @cars = JSON.parse(open($urlprev).string)
   
     end
   
     def next
-      $urlnext = 'http://localhost:3000/api/cars?page=2'
+      $urlnext = $pgurl + "2"
   
       @cars = JSON.parse(open($urlnext).string)
   

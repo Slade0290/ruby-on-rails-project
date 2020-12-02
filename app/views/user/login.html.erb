@@ -14,6 +14,7 @@
 function session () {
 
 var baseurl = "http://localhost:3300";
+// var baseurl = "https://bnyonrails.herokuapp.com"
 
 var email = document.getElementById("signInUserEmail").value;
 var pswd  = document.getElementById("signInUserPassword").value;
@@ -22,7 +23,7 @@ var formdata = new FormData();
 formdata.append("email", email);
 formdata.append("password", pswd);
 
-fetch("http://localhost:3000/api/sessions" ,{
+fetch("https://bnyonrails.herokuapp.com/api/sessions" ,{
 method: "POST",
 mode: 'no-cors',
 // headers: {
@@ -35,12 +36,12 @@ body: formdata
 
     function(response) {
       
-       if (response.status !== 0) {
-            console.log('Looks like there was a problem. Status Code: ' + response);
-            return;
-          } else {
+       if (response.status == 0) {
 
-                window.location.href = baseurl + "/cars";  
+          // window.location.href = baseurl + "/cars";  
+          } else {
+            console.log('Looks like there was a problem. Status Code: ' + response);
+                        return;
 
           }
          

@@ -3,7 +3,9 @@ class CarsController < ApplicationController
   require 'open-uri'
   require 'json'
 
-  $url = 'http://localhost:3000/api/cars/'
+  $url = 'https://bnyonrails.herokuapp.com/api/cars/'
+
+  # $pgurl = 'http://localhost:3000/api/cars?page='
 
   def index
     @cars = JSON.parse(open($url).string)
@@ -17,17 +19,17 @@ class CarsController < ApplicationController
     @car = JSON.parse(open($url + params[:id]).string)
   end
 
-  def prev
-    $urlprev = 'http://localhost:3000/api/cars?page=1'
+  # def prev
+  #   $urlprev = $pgurl + "1"
 
-    @cars = JSON.parse(open($urlprev).string)
+  #   @cars = JSON.parse(open($urlprev).string)
 
-  end
+  # end
 
-  def next
-    $urlnext = 'http://localhost:3000/api/cars?page=2'
+  # def next
+  #   $urlnext = $pgurl + "2"
 
-    @cars = JSON.parse(open($urlnext).string)
+  #   @cars = JSON.parse(open($urlnext).string)
 
-  end
+  # end
 end
