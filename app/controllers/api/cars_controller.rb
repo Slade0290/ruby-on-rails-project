@@ -6,7 +6,18 @@ skip_before_action :verify_authenticity_token , only: [:create, :update, :show ,
     swagger_controller :CarsRessources, "Cars Management"
 
     def index
-        # @cars = Car.all
+        #@cars = Car.page(params[:page])
+
+        @cars = Car.page(params[:page]).per(5)
+
+        render json: @cars,
+               meta: {
+                 pagination: {
+                   per_page: 5,
+                   total_pages: 10,
+                   total_objects: 150
+                 }
+               }
         if params.nil?
             @cars = policy_scope(Car)
         else
