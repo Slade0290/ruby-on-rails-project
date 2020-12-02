@@ -7,7 +7,51 @@
         <br/>
         <label>Password : </label><input type="password" id="signInUserPassword"/>
         <br/>
-        <button type="button" id="btn_validate_login">Validate</button>
+        <button type="button" id="btn_validate_login" onclick="session()" >Validate</button>
     </div>
-    <a href="/signup" class="a-user">Sign up</a>
+   <script>
+     
+function session () {
+
+var baseurl = "http://localhost:3300";
+
+var email = document.getElementById("signInUserEmail").value;
+var pswd  = document.getElementById("signInUserPassword").value;
+
+var formdata = new FormData();
+formdata.append("email", email);
+formdata.append("password", pswd);
+
+fetch("http://localhost:3000/api/sessions" ,{
+method: "POST",
+mode: 'no-cors',
+// headers: {
+//       'Accept': 'application/json, text/plain, */*',
+//     'Content-Type': 'application/json',
+//   },
+body: formdata
+})
+.then(
+
+    function(response) {
+      
+       if (response.status !== 0) {
+            console.log('Looks like there was a problem. Status Code: ' + response);
+            return;
+          } else {
+
+                window.location.href = baseurl + "/cars";  
+
+          }
+         
+
+       
+    }
+)};
+ 
+</script>
+
+    <a href="/signup" class="a-signup">Sign up</a>
 </div>
+
+

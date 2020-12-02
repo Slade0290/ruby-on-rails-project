@@ -7,9 +7,68 @@
         <br/>
         <label>Password : </label><input type="password" id="signInUserPassword"/>
         <br/>
-        <label>Confirm : </label><input type="password" id="signInUserPassword"/>
-        <br/>
-        <button type="button" id="btn_validate_signup">Validate</button>
+        <%
+=begin%>
+ <label>Confirm : </label><input type="password" id="signInUserPassword"/>
+        <br/> 
+<%
+=end%>
+        <button type="button" id="btn_validate_signup" onclick="session()" >Validate</button>
     </div>
+    <script>
+    
+    
+
+// var login = document.getElementById("btn_validate_login");
+
+// console.log(email)
+// console.log(pswd)
+
+// login.addEventListener("onclick" , session);
+
+function session () {
+
+var email = document.getElementById("signInUserEmail").value;
+var pswd  = document.getElementById("signInUserPassword").value;
+console.log(email);
+
+const user = { email: email, password: pswd };
+
+var formdata = new FormData();
+formdata.append("user[email]", email);
+formdata.append("user[password]", pswd);
+
+fetch("http://localhost:3000/api/registrations" ,{
+method: "POST",
+mode: 'no-cors',
+// headers: {
+//       'Accept': 'application/json, text/plain, */*',
+//     'Content-Type': 'application/json',
+//   },
+body: formdata
+})
+.then(
+    function(response) {
+
+          if (response.status !== 0) {
+            console.log('Looks like there was a problem. Status Code: ' + response);
+            return;
+          } else {
+
+                window.location.href = baseurl + "/cars";  
+
+                }
+
+
+    }
+)
+
+};
+
+
+
+// 
+    
+    </script>
     <a href="/" class="a-user">Back</a>
 </div>

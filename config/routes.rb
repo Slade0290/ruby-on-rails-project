@@ -12,5 +12,12 @@ Rails.application.routes.draw do
   get '/cars', to: 'cars#index'
   get '/cars/:id', to: 'cars#show'
   get '/cars/:id/edit', to: 'cars#edit'
+
+  get '/car/next' , to: 'paginates#next'
+
+  get '/car/prev' , to: 'paginates#prev'
+
+  #get '/http://localhost:3000/api/cars?page=2'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

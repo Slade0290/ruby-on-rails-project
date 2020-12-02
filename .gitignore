@@ -17,6 +17,9 @@ Gemfile.lock/
 */*.log
 log/*
 config/database.yml
+package.json
+package-lock.json
+
 
 # Used by dotenv library to load environment variables.
 # .env

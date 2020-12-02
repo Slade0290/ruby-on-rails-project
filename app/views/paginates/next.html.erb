@@ -1,0 +1,47 @@
+<div class="main">
+<h1><a href="/" class="homepage">Black & Yellow - Cars</a></h1>
+<div>
+    <a href="/cars/search" class="btn-search" id="search_btn">Search</a>
+</div>
+<br />
+    <div class="content">
+        <% @cars.slice(0, 10).each do |cars| %>
+            <a href="/cars/<%= cars["id"] %>" class="item">
+                <div>ID : <%= cars["id"] %></div>
+                <div>Brand :<%= cars["brand"] %></div>
+                <div>Model : <%= cars["model"] %></div>
+                <div>Year: <%= cars["year"] %></div>
+            </a>
+        <% end %>
+    </div>
+    
+    <%
+=begin%>
+ <button  href="/prev" type="button" class="next" id="btn_index">Prev</button>
+
+    <button  href="/next" type="button" class="next" id="btn_index">Next</button> 
+<%
+=end%>
+
+    <button type="button" class="next" id="btn_index" onclick="prev()">Prev</button>
+
+    <button type="button" class="next" id="btn_index"  onclick="next()">Next</button>
+
+<script>
+
+var baseurl = "http://localhost:3300";
+
+// console.log(baseurl +'/test');
+
+function next () {
+    window.location.href = baseurl + "/car/next";
+}
+
+
+function prev() {
+    window.location.href = baseurl + "/car/prev";  
+}
+
+</script>
+    <a href="/cars/create" class="a-new-el">+</a>
+</div>

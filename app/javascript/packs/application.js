@@ -3,7 +3,7 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require("@rails/ujs").start()
+// require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
@@ -30,3 +30,67 @@ fetch ("https://bnyonrails.herokuapp.com/api/cars")
     }
 );
 */
+
+// fetch ("https://api.github.com/users/aros")
+//     .then(response => response.json())
+//     .then((data) => {
+    
+//         console.log(data.login)
+//     }
+// );
+
+
+
+fetch ("https://api.github.com/users/aros")
+.then(response => response.json())
+.then((data) => {
+
+    console.log(data.login)
+}
+);
+
+// const user_sign_in = document.querySelector('#btn_validate_login');
+
+
+// var email = document.getElementById("signInUserEmail");
+// var pswd  = document.getElementById("signInUserPassword");
+
+// var login = document.getElementById("btn_validate_login");
+
+// console.log(email)
+// console.log(pswd)
+
+// login.addEventListener("onclick" , session);
+
+//
+
+
+// function session (email , pswd) {
+//     const user = { email: email, password: pswd };
+
+// fetch("https://bnyonrails.herokuapp.com/users/sign_in" ,{
+// method: "POST",
+// headers: {
+//     'Content-Type': 'application/json',
+//   },
+// body: JSON.stringify({ user })
+// })
+// .then(
+//     function(response) {
+//         if (response.status !== 200) {
+//             console.log('Looks like there was a problem. Status Code: ' +
+//               response.status);
+//             return;
+//           }
+
+//           response.json().then(function(data) {
+//             console.log(data);
+//           });
+//     }
+// )
+
+// };
+
+
+
+
