@@ -274,9 +274,9 @@ skip_before_action :verify_authenticity_token , only: [:create, :update, :show ,
 
    swagger_api :update do |api|
     summary "Update a car"
+    param :path, :id, :integer, :required, "Property ID"
     response :unauthorized
-    response :not_acceptable
-    response :unprocessable_entity
+    response :not_found
     end
 
    swagger_api :destroy do |api|
