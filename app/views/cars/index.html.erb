@@ -15,54 +15,13 @@
         <% end %>
     </div>
     
-    <button  href="/next" type="button" onclick="next()" class="next" id="btn_index">Next</button>
+    <button  href="/next" type="button" class="next" id="btn_index">Next</button>
+
+    <%
+=begin%>
+ <a href="/prev" onclick="next()" class="next">Next</a> 
+<%
+=end%>
   
     <a href="/cars/create" class="a-new-el">+</a>
 </div>
-
-
-<script>
-    var currentPage = 1;
-
-    (function() {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        if(urlParams.get('page') != null) {
-            currentPage = urlParams.get('page')
-            if(currentPage > 1) {
-                var prevBtn = document.createElement("button");
-                prevBtn.setAttribute("type", "button");
-                prevBtn.setAttribute("onclick", "prev()");
-                prevBtn.innerHTML = "Back"
-                prevBtn.classList.add("next");
-                insertAfter(document.getElementById("btn_index"), prevBtn);
-            }
-        } else {
-            currentPage = 1;
-        }
-    })();
-
-    function next() {
-        currentPage++;
-        if(window.location.href.includes("page")) {
-            window.location.href = window.location.href.slice(0, -1) + currentPage;
-        } else {
-            window.location.href = window.location.href + "?page=" + currentPage;
-        }
-    }
-
-    function prev() {
-        if(currentPage > 1) {
-            currentPage--;
-        }
-        if(window.location.href.includes("page")) {
-            window.location.href = window.location.href.slice(0, -1) + currentPage;
-        } else {
-            window.location.href = window.location.href + "?page=" + currentPage;
-        }
-    }
-    
-    function insertAfter(referenceNode, newNode) {
-        referenceNode.parentNode.insertBefore(newNode, referenceNode);
-    }
-</script>
