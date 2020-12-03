@@ -18,10 +18,11 @@ skip_before_action :verify_authenticity_token , only: [:create, :update, :show ,
                    total_objects: 150
                  }
                }
-        if params.nil?
-            @cars = policy_scope(Car)
-        else
-            mainQuery = ""
+        @cars = policy_scope(Car)
+    end
+
+    def search 
+        mainQuery = ""
             ######################################################## BRAND ########################################################
             if !params[:brand].nil?
                 brandQuery = "( brand ="
@@ -186,7 +187,6 @@ skip_before_action :verify_authenticity_token , only: [:create, :update, :show ,
             # TODO
             @cars = Car.where(mainQuery)
         end
-    end
 
     def create
         # @cars = policy_scope(Car)

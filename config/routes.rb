@@ -25,6 +25,7 @@ Rails.application.routes.draw do
      # }
 
      resources :sessions
+     resources :search
      resources :registrations
       resources :cars, only: [ :index , :create , :show , :destroy, :update] do
         resources :cars_details
