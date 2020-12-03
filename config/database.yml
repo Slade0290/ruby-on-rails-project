@@ -25,6 +25,6 @@ test:
 
 production:
       adapter: postgresql
-      database: dd8t7diiunle4t
+      database: dfkntanr3lpufu
       pool: 5
       timeout: 5000
