@@ -162,9 +162,61 @@ class Api::SearchController < Api::CarsController
                 mainQuery += updated_atQuery + ") "
             end
             ######################################################## RATE ########################################################
-            # TODO
+            if !params[:rate].nil?                
+                if params[:rate].include? "["
+                    arr_rate = params[:rate].tr('[]', '').split(',')                    
+                    if arr_rate[0].empty? 
+                        if !mainQuery.empty?
+                            rateQuery = " AND ( cars.rate::INTEGER <=" + arr_rate[1]
+                        else
+                            rateQuery = " ( cars.rate::INTEGER <=" + arr_rate[1]
+                        end
+                    elsif arr_rate.count == 1
+                        if !mainQuery.empty?
+                            rateQuery = " AND ( cars.rate::INTEGER >=" + arr_rate[0]
+                        else
+                            rateQuery = " ( cars.rate::INTEGER >=" + arr_rate[0]
+                        end
+                    else
+                        if !mainQuery.empty?
+                            rateQuery = " AND ( cars.rate::INTEGER >="
+                        else
+                            rateQuery = " ( cars.rate::INTEGER >="
+                        end
+                        rateQuery += " " + arr_rate[0] + " AND cars.rate::INTEGER <= " + arr_rate[1]
+                    end
+                else
+                    if !mainQuery.empty?
+                        rateQuery = " AND ( cars.rate ="
+                    else
+                        rateQuery = " ( cars.rate ="
+                    end
+                    arr_rate = params[:rate].split(',')
+                    i = 1
+                    arr_rate.each do |rate|
+                        rateQuery += " \'#{rate}\' "
+                        i += 1
+                        if i < arr_rate.length + 1 
+                            rateQuery += "OR cars.rate ="
+                        end
+                    end
+                end
+                mainQuery += rateQuery + " ) "
+            end
             ######################################################## AVIS ########################################################
-            # TODO
+            if !params[:avis].nil?
+                avisQuery = "( avis ="
+                arr_avis = params[:avis].split(',')
+                i = 1
+                arr_avis.each do |avis|
+                    avisQuery += " \'#{avis}\' "
+                    i += 1
+                    if i < arr_avis.length + 1 
+                        avisQuery += "OR avis ="
+                    end
+                end
+                mainQuery = avisQuery + ") "
+            end
             @cars = Car.where(mainQuery)
         end
 
