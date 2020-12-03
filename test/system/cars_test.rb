@@ -5,7 +5,10 @@ class CarsTest < ApplicationSystemTestCase
     @car = cars(:one)
   end
 
+
+
   test "visiting the index" do
+    api_sessions users(:one)
     visit cars_url
     assert_selector "h1", text: "Cars"
   end

@@ -10,7 +10,7 @@ def create
              head(:ok)
              session[:user_authenticity_token] = @user.authentication_token
              #format.json { render json: @users.email, status: :created }
-             render plain: '200 Success', status: :ok
+            #  render plain: '200 Success', status: :ok
 
         else
           # render json: @user , status: :failed

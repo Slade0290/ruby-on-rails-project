@@ -21,7 +21,7 @@ def create
     if @user.valid_password?(params[:password])
         session[:user_authenticity_token] = @user.authentication_token
         head(:ok) 
-        render plain: '200 Success', status: :ok
+        # render plain: '200 Success', status: :ok
 
         # render nothing: true, status: 200
     else
