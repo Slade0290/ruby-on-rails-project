@@ -4,7 +4,8 @@ class CarsController < ApplicationController
     
     acts_as_token_authentication_handler_for User
 
-  
+    skip_before_action :verify_authenticity_token , only: [:index]
+
   before_action :set_car, only: [:show, :edit, :update, :destroy]
 
   # GET /cars

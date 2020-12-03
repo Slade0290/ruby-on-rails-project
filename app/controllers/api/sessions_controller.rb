@@ -11,15 +11,21 @@ skip_before_action :verify_authenticity_token
 
 protect_from_forgery with: :null_session
 
+swagger_controller :SessionsRessources, "Sessions Management"
+
+
 def create
 # super
    @user = User.where(email: params[:email]).first
 
     if @user.valid_password?(params[:password])
         session[:user_authenticity_token] = @user.authentication_token
-        head(:ok)
+        head(:ok) 
+        render plain: '200 Success', status: :ok
+
+        # render nothing: true, status: 200
     else
-        head (:not_found)
+        head(:not_found)
     end
 
 end
@@ -45,5 +51,26 @@ end
       #    def set_user
        #       @user = User.find(params[:id])
         #  end
+
+        def self.add_common_params(api)
+            api.param :form, "email", :string, :optional, "email"
+            api.param :form, "password", :string, :optional, "password"
+        end
+    
+       
+       swagger_api :create do |api|
+           summary "Create a session"
+           Api::CarsController::add_common_params(api)
+           response :success
+           response :not_found
+       end
+        
+    
+    #    swagger_api :destroy do |api|
+    #        summary "Destroy session"
+    #        param :path, :id, :integer, :required, "Property ID"
+    #        response :unauthorized
+    #        response :not_found
+    #    end
 
 end

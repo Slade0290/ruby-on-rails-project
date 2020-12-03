@@ -4,6 +4,18 @@
   "basePath": "",
   "apis": [
     {
+      "path": "/api/sessions.{format}",
+      "description": "Sessions Management"
+    },
+    {
+      "path": "/api/registrations.{format}",
+      "description": "Registrations Management"
+    },
+    {
+      "path": "/api/cars_details.{format}",
+      "description": "Cars Details Management"
+    },
+    {
       "path": "/api/cars.{format}",
       "description": "Cars Management"
     }
