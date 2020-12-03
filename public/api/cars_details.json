@@ -2,13 +2,13 @@
   "apiVersion": "1.0",
   "swaggerVersion": "1.2",
   "basePath": "",
-  "resourcePath": "cars",
+  "resourcePath": "cars_details",
   "apis": [
     {
-      "path": "/api/cars",
+      "path": "/api/cars/{car_id}/cars_details",
       "operations": [
         {
-          "summary": "Fetches all cars",
+          "summary": "Fetches all cars details",
           "responseMessages": [
             {
               "code": 401,
@@ -21,36 +21,36 @@
               "message": "Not Acceptable"
             }
           ],
-          "nickname": "Api::Cars#index",
+          "nickname": "Api::CarsDetails#index",
           "method": "get"
         }
       ]
     },
     {
-      "path": "/api/cars",
+      "path": "/api/cars/{car_id}/cars_details",
       "operations": [
         {
           "summary": "Create a new car item",
           "parameters": [
             {
               "paramType": "form",
-              "name": "car[brand]",
+              "name": "carDetails[Rate]",
               "type": "string",
-              "description": "brand",
+              "description": "id",
               "required": false
             },
             {
               "paramType": "form",
-              "name": "car[model]",
+              "name": "carDetails[Avis]",
               "type": "string",
-              "description": "model",
+              "description": "id",
               "required": false
             },
             {
               "paramType": "form",
-              "name": "car[year]",
+              "name": "carDetails[id]",
               "type": "string",
-              "description": "year",
+              "description": "id",
               "required": false
             }
           ],
@@ -71,16 +71,16 @@
               "message": "Unprocessable Entity"
             }
           ],
-          "nickname": "Api::Cars#create",
+          "nickname": "Api::CarsDetails#create",
           "method": "post"
         }
       ]
     },
     {
-      "path": "/api/cars/{id}",
+      "path": "/api/cars/{car_id}/cars_details/{id}",
       "operations": [
         {
-          "summary": "Fetch a car",
+          "summary": "Fetch a car details",
           "parameters": [
             {
               "paramType": "path",
@@ -102,16 +102,16 @@
               "message": "Not Acceptable"
             }
           ],
-          "nickname": "Api::Cars#show",
+          "nickname": "Api::CarsDetails#show",
           "method": "get"
         }
       ]
     },
     {
-      "path": "/api/cars/{id}",
+      "path": "/api/cars/{car_id}/cars_details/{id}",
       "operations": [
         {
-          "summary": "Update a car",
+          "summary": "Update a car details",
           "parameters": [
             {
               "paramType": "path",
@@ -133,16 +133,16 @@
               "message": "Not Found"
             }
           ],
-          "nickname": "Api::Cars#update",
+          "nickname": "Api::CarsDetails#update",
           "method": "patch"
         }
       ]
     },
     {
-      "path": "/api/cars/{id}",
+      "path": "/api/cars/{car_id}/cars_details/{id}",
       "operations": [
         {
-          "summary": "Destroy an existing car",
+          "summary": "Destroy an existing car details",
           "parameters": [
             {
               "paramType": "path",
@@ -164,7 +164,7 @@
               "message": "Not Found"
             }
           ],
-          "nickname": "Api::Cars#destroy",
+          "nickname": "Api::CarsDetails#destroy",
           "method": "delete"
         }
       ]
