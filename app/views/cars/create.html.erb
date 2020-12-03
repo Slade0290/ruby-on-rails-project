@@ -5,8 +5,54 @@
             <div>Brand : <input class="create-input" type="text"/></div>
             <div>Model : <input class="create-input" type="text"/></div>
             <div>Year : <input class="create-input" type="text"/></div>
-            <a id="onclick-create-validation" href="#" class="a-button-el">Validate</a>
+            <a onclick="create()" class="a-button-el">Validate</a>
         </section>
     </div>
     <a href="/cars/<%= params[:id] %>" class="a-user">Back</a>
 </div>
+
+<div id="response" style="visibility: hidden;"></div>
+
+
+
+<div id="error" style="visibility: hidden;">Error : brand field mandatory</div>
+
+<script>
+
+function create() {
+    var brand = document.getElementById("create-brand").value
+    var model = document.getElementById("create-model").value
+    var year = document.getElementById("create-year").value
+    if(!brand) {
+        errorFieldRequire();
+        return;
+    }
+    var formdata = new FormData();
+    formdata.append("brand", brand);
+    formdata.append("model", model);
+    formdata.append("year", year);    
+
+    fetch("https://bnyonrails.herokuapp.com/api/cars",{
+    method: "POST",
+    mode: 'no-cors',
+    body: formdata
+    })
+    .then(
+        function(response) {      
+            if (response.status == 0) {
+                console.log(response)
+                hideOrShow()
+                document.getElementById("response").innerHTML = response
+            } else {
+                console.log('Looks like there was a problem. Status Code: ' + response);
+                return;
+            }
+        });
+}
+
+function errorFieldRequire() {
+    document.getElementById("error").style.visibility = "visible"
+}
+
+
+</script>

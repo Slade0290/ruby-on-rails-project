@@ -57,6 +57,7 @@
 }
 .next:hover {
     letter-spacing: 5px;
+    cursor: pointer;
 }
 
 .a-new-el {
@@ -120,4 +121,23 @@
 .btn-search:hover {
     background-color: rgba(220,20,60,0.5);
     color: black;
+}
+
+#error {
+    background-color: lightcoral;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    height: 50px;
+}
+
+#response {
+    background-color: lightgreen;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: 50px;
+    
 }

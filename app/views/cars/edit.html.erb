@@ -3,11 +3,60 @@
     <div class="content">
         <section class="item-detail">
             <div>ID : <%= params[:id] %></div>
-            <div>Brand : <input class="edit-input" type="text" value="<%= @car["car"]["brand"] %>"/></div>
-            <div>Model : <input class="edit-input" type="text" value="<%= @car["car"]["model"] %>"/></div>
-            <div>Year : <input class="edit-input" type="text" value="<%= @car["car"]["year"] %>"/></div>
-            <a id="onclick-edit-validation" href="#" class="a-button-el">Validate</a>
+            <div>Brand : <input id="edit-brand" class="edit-input" type="text" value="<%= @car["car"]["brand"] %>"/></div>
+            <div>Model : <input id="edit-model" class="edit-input" type="text" value="<%= @car["car"]["model"] %>"/></div>
+            <div>Year : <input id="edit-year" class="edit-input" type="text" value="<%= @car["car"]["year"] %>"/></div>
+            <a onclick="edit()" href="#" class="a-button-el">Validate</a>
         </section>
     </div>
     <a href="/cars/<%= params[:id] %>" class="a-user">Back</a>
 </div>
+
+
+
+<div id="response" style="visibility: hidden;"></div>
+
+
+
+<div id="error" style="visibility: hidden;">Error : brand field mandatory</div>
+
+<script>
+
+function edit() {
+    var brand = document.getElementById("edit-brand").value
+    var model = document.getElementById("edit-model").value
+    var year = document.getElementById("edit-year").value
+    if(!brand) {
+        errorFieldRequire();
+        return;
+    }
+    var formdata = new FormData();
+    formdata.append("brand", brand);
+    formdata.append("model", model);
+    formdata.append("year", year);    
+
+    fetch("https://bnyonrails.herokuapp.com/api/cars/",{
+    method: "PATCH",
+    mode: 'no-cors',
+    body: formdata
+    })
+    .then(
+        function(response) {      
+            if (response.status == 0) {
+                console.log(response)
+                hideOrShow()
+                document.getElementById("response").innerHTML = response
+                document.getElementById("response").style.visibility = "visible"
+            } else {
+                console.log('Looks like there was a problem. Status Code: ' + response);
+                return;
+            }
+        });
+}
+
+function errorFieldRequire() {
+    document.getElementById("error").style.visibility = "visible"
+}
+
+
+</script>

@@ -2,20 +2,96 @@
 <h1><a href="/" class="homepage">Black & Yellow - Cars</a></h1>
 <br />
 <div>
-    <form>
-        <label>ID : </label><input type="number" id="" />
-        <label>Brand : </label><input type="text" id="" />
-        <label>Model : </label><input type="text" id="" />
-        <label>Year : </label><input type="number" id="" />
-        <label>Created at : </label><input type="date" id="" />
-        <label>Updated at : </label><input type="date" id="" />
-        <label>Rate at : </label><input type="number" id="" />
-        <label>Avis at : </label><input type="text" id="" />
+<div onclick="hideOrShow()" id="form-label">Hide form</div>
+    <form id="form">
+        <div><label>ID : </label><input type="number" id="search-id" /></div>
+        <div><label>Brand : </label><input type="text" id="search-brand" /></div>
+        <div><label>Model : </label><input type="text" id="search-model" /></div>
+        <div><label>Year : </label><input type="number" id="search-year" /></div>
+        <div><label>Rate at : </label><input type="number" id="search-rate" /></div>
+        <div><label>Avis at : </label><input type="text" id="search-avis" /></div>
+        <div><label>Created at : </label><input type="date" id="search-createdat" /></div>
+        <div><label>Updated at : </label><input type="date" id="search-updatedat" /></div>
     </form>
+    <div id="response"></div>
 </div>
     <div class="content" id="result">
 
     </div>
-    <a href="#" onclick="next()" class="next">Next</a>
+    <button href="#" onclick="search()" class="next">Search</button>
     <a href="/cars/create" class="a-new-el">+</a>
 </div>
+
+<script>
+    function hideOrShow() {
+        var form = document.getElementById("form");
+        if(form.style.visibility == "hidden"){
+            form.style.visibility = "visible";
+            document.getElementById("form-label").innerHTML = "Hide form"
+        } else {
+            form.style.visibility = "hidden"
+            document.getElementById("form-label").innerHTML = "Show form"
+        }
+    }
+
+    function search() {
+        var id = document.getElementById("search-id").value
+        var brand = document.getElementById("search-brand").value
+        var model = document.getElementById("search-model").value
+        var year = document.getElementById("search-year").value
+        var rate = document.getElementById("search-rate").value
+        var avis = document.getElementById("search-avis").value
+        var createdat = document.getElementById("search-createdat").value
+        var updatedat = document.getElementById("search-updatedat").value
+
+        var url = "https://bnyonrails.herokuapp.com/api/search?"
+
+        if(id) {
+            url += "id=" + id + "&"
+        }
+        
+        if(brand) {
+            url += "brand=" + brand + "&"
+        }
+        
+        if(model) {
+            url += "model=" + model + "&"
+        }
+        
+        if(year) {
+            url += "year=" + year + "&"
+        }
+        
+        if(rate) {
+            url += "rate=" + rate + "&"
+        }
+        
+        if(avis) {
+            url += "avis=" + avis + "&"
+        }
+        
+        if(createdat) {
+            url += "createdat=" + createdat + "&"
+        }
+        
+        if(updatedat) {
+            url += "updatedat=" + updatedat + "&"
+        }
+        
+        fetch(url,{
+        method: "GET",
+        mode: 'no-cors',
+        })
+        .then(
+            function(response) {      
+                if (response.status == 0) {
+                    console.log(response)
+                    hideOrShow()
+                    document.getElementById("response").innerHTML = response
+                } else {
+                    console.log('Looks like there was a problem. Status Code: ' + response);
+                return;
+                }
+            });
+    }
+</script>
