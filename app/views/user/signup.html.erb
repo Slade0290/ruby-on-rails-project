@@ -7,12 +7,10 @@
         <br/>
         <label>Password : </label><input type="password" id="signInUserPassword"/>
         <br/>
-        <%
-=begin%>
- <label>Confirm : </label><input type="password" id="signInUserPassword"/>
+
+ <label>Confirm : </label><input type="password" id="signInUserPassword2"/>
         <br/> 
-<%
-=end%>
+
         <button type="button" id="btn_validate_signup" onclick="session()" >Validate</button>
     </div>
     <script>
@@ -28,8 +26,12 @@
 
 function session () {
 
+
+
+
 var email = document.getElementById("signInUserEmail").value;
 var pswd  = document.getElementById("signInUserPassword").value;
+var pswd2  = document.getElementById("signInUserPassword2").value;
 console.log(email);
 
 const user = { email: email, password: pswd };
